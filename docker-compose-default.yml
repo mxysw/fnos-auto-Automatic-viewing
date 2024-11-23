@@ -26,21 +26,21 @@ services:
 
  
 
-  # prowlarr:
-  #   image: linuxserver/prowlarr:develop
-  #   container_name: prowlarr
-  #   restart: unless-stopped
-  #   environment:
-  #     - PUID=${PUID}
-  #     - PGID=${PGID}
-  #     - TZ=${TZ}
-  #   volumes:
-  #     - ${CONFIG_PATH}/prowlarr:/config
-  #   ports:
-  #     - 60223:9696
-  #   networks:
-  #     network:
-  #       ipv4_address: 172.128.2.23
+  prowlarr:
+    image: linuxserver/prowlarr:develop
+    container_name: prowlarr
+    restart: unless-stopped
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+    volumes:
+      - ${CONFIG_PATH}/prowlarr:/config
+    ports:
+      - 60223:9696
+    networks:
+      network:
+        ipv4_address: 172.128.2.23
 
   jproxy:
     image: luckypuppy514/jproxy:latest
