@@ -77,8 +77,8 @@ echo "✅  生成环境变量成功"
 
 echo ""
 echo "修改目录权限 ......"
-sudo chown -R ${USERNAME}:${GROUPNAME} ../automatic-theater
-sudo chmod -R 770 ../automatic-theater
+sudo chown -R ${USERNAME}:${GROUPNAME} ../fnos-auto-Automatic-viewing
+sudo chmod -R 770 ../fnos-auto-Automatic-viewing
 echo "✅  修改 automatic-theater 目录权限成功"
 
 echo ""
