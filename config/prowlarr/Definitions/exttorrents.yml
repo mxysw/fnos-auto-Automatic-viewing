@@ -9,7 +9,7 @@ requestDelay: 5
 links:
   - https://ext.to/
   - https://search.extto.com/
-  - https://extranet.torrentbay.net/
+  - https://extranet.torrentbay.st/
 legacylinks:
   - https://ext.unblockninja.com/
   - https://t.extto.com/
@@ -17,6 +17,7 @@ legacylinks:
   - https://site.extto.com/
   - https://ext.torrentbay.to/
   - https://extranet.torrentbay.to/
+  - https://extranet.torrentbay.net/
 
 caps:
   categorymappings:
@@ -95,15 +96,8 @@ settings:
     options:
       desc: desc
       asc: asc
-  - name: flaresolverr
-    type: info
-    label: FlareSolverr
-    default: This site may use Cloudflare DDoS Protection, therefore Prowlarr requires FlareSolverr to access it.
-
-download:
-  selectors:
-    - selector: a[href^="magnet:?xt="]
-      attribute: href
+  - name: info_flaresolverr
+    type: info_flaresolverr
 
 search:
   paths:
@@ -121,19 +115,23 @@ search:
     selector: table.table-striped > tbody > tr
 
   fields:
-    category:
+    category_optional:
       selector: td:nth-child(1) div div a:last-child
       attribute: href
       optional: true
-      default: "/other/"
+    category:
+      text: "{{ if .Result.category_optional }}{{ .Result.category_optional }}{{ else }}/other/{{ end }}"
     title:
       selector: td:nth-child(1) div a
     details:
       selector: td:nth-child(1) div a
       attribute: href
-    download:
-      selector: td:nth-child(1) div a
+    infohash:
+      selector: a[href^="magnet:?xt="]
       attribute: href
+      filters:
+        - name: regexp
+          args: ([A-F|a-f|0-9]{40})
     size:
       selector: td:nth-child(2)
     files:

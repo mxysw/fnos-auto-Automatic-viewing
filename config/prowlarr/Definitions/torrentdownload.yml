@@ -7,34 +7,10 @@ type: public
 encoding: UTF-8
 links:
   - https://www.torrentdownload.info/
-  - https://torrentdownload.unblockit.date/
+legacylinks:
   - https://torrentdownload.mrunblock.bond/
   - https://torrentdownload.nocensor.cloud/
-legacylinks:
-  - https://torrentdownload.nocensor.space/
-  - https://torrentdownload.nocensor.work/
-  - https://torrentdownload.nocensor.biz/
-  - https://torrentdownload.nocensor.sbs/
-  - https://torrentdownload.unblockit.nz/
-  - https://torrentdownload.nocensor.world/
-  - https://torrentdownload.unblockit.page/
-  - https://torrentdownload.unblockit.pet/
-  - https://torrentdownload.nocensor.lol/
-  - https://torrentdownload.unblockit.ink/
-  - https://torrentdownload.unblockit.bio/
-  - https://torrentdownload.unblockit.boo/
-  - https://torrentdownload.mrunblock.guru/
-  - https://torrentdownload.unblockit.click/
-  - https://torrentdownload.unblockit.asia/
-  - https://torrentdownload.unblockit.mov/
-  - https://torrentdownload.mrunblock.life/
-  - https://torrentdownload.unblockit.rsvp/
-  - https://torrentdownload.nocensor.click/
-  - https://torrentdownload.unblockit.vegas/
-  - https://torrentdownload.unblockit.esq/
-  - https://torrentdownload.unblockit.zip/
-  - https://torrentdownload.unblockit.foo/
-  - https://torrentdownload.unblockit.ing/
+  - https://torrentdownload.unblockit.download/
 
 caps:
   categorymappings:
@@ -124,7 +100,7 @@ download:
 
 search:
   paths:
-    - path: "search{{ re_replace .Config.sort \"_\" \"\" }}?q={{ if .Keywords }}{{ .Keywords }}{{ else }}{{ .Today.Year }}{{ end }}"
+    - path: "{{ if .Keywords }}search{{ re_replace .Config.sort \"_\" \"\" }}?q={{ .Keywords }}{{ else }}/{{ end }}"
 
   rows:
     selector: table.table2 > tbody > tr:has(span.smallish)

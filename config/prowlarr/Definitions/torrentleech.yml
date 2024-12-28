@@ -97,7 +97,7 @@ settings:
     default: false
   - name: exclude_archives
     type: checkbox
-    label: Exclude torrents with the tag RAR from results
+    label: Exclude torrents with the tag RAR from results (does not support IMDBID search)
     default: false
   - name: sort
     type: select
@@ -119,6 +119,8 @@ settings:
     type: info
     label: Results Per Page
     default: For best results, change the <b>Torrents per page:</b> setting to <b>100</b> on your account profile.
+  - name: info_flaresolverr
+    type: info_flaresolverr
 
 login:
   path: user/account/login/

@@ -5,7 +5,7 @@
   <LogFileRetentionDays>3</LogFileRetentionDays>
   <RunAtStartup>true</RunAtStartup>
   <IsStartupWizardCompleted>true</IsStartupWizardCompleted>
-  <EnableUPnP>false</EnableUPnP>
+  <EnableUPnP>true</EnableUPnP>
   <PublicPort>8096</PublicPort>
   <PublicHttpsPort>8920</PublicHttpsPort>
   <HttpServerPortNumber>8096</HttpServerPortNumber>
@@ -16,8 +16,8 @@
   <EnableRemoteAccess>true</EnableRemoteAccess>
   <LogAllQueryTimes>false</LogAllQueryTimes>
   <EnableCaseSensitiveItemIds>true</EnableCaseSensitiveItemIds>
-  <PreferredMetadataLanguage>zh-CN</PreferredMetadataLanguage>
-  <MetadataCountryCode>CN</MetadataCountryCode>
+  <PreferredMetadataLanguage>en</PreferredMetadataLanguage>
+  <MetadataCountryCode>US</MetadataCountryCode>
   <SortRemoveWords>
     <string>the</string>
     <string>a</string>
@@ -27,11 +27,10 @@
     <string>el</string>
     <string>la</string>
   </SortRemoveWords>
-  <LibraryMonitorDelay>60</LibraryMonitorDelay>
+  <LibraryMonitorDelaySeconds>90</LibraryMonitorDelaySeconds>
   <EnableDashboardResponseCaching>true</EnableDashboardResponseCaching>
   <ImageSavingConvention>Compatible</ImageSavingConvention>
   <EnableAutomaticRestart>true</EnableAutomaticRestart>
-  <ServerName>ATM</ServerName>
   <PreferredDetectedRemoteAddressFamily>InterNetwork</PreferredDetectedRemoteAddressFamily>
   <UICulture>zh-CN</UICulture>
   <RemoteClientBitrateLimit>0</RemoteClientBitrateLimit>
@@ -45,21 +44,22 @@
   <ImageExtractionTimeoutMs>0</ImageExtractionTimeoutMs>
   <PathSubstitutions />
   <UninstalledPlugins />
-  <CollapseVideoFolders>true</CollapseVideoFolders>
+  <CollapseVideoFolders>false</CollapseVideoFolders>
   <EnableOriginalTrackTitles>false</EnableOriginalTrackTitles>
-  <VacuumDatabaseOnStartup>true</VacuumDatabaseOnStartup>
+  <VacuumDatabaseOnStartup>false</VacuumDatabaseOnStartup>
   <SimultaneousStreamLimit>0</SimultaneousStreamLimit>
   <DatabaseCacheSizeMB>128</DatabaseCacheSizeMB>
   <EnableSqLiteMmio>false</EnableSqLiteMmio>
   <PlaylistsUpgradedToM3U>true</PlaylistsUpgradedToM3U>
-  <ImageExtractorUpgraded>true</ImageExtractorUpgraded>
+  <ImageExtractorUpgraded1>true</ImageExtractorUpgraded1>
   <EnablePeopleLetterSubFolders>true</EnablePeopleLetterSubFolders>
   <OptimizeDatabaseOnShutdown>true</OptimizeDatabaseOnShutdown>
   <DatabaseAnalysisLimit>400</DatabaseAnalysisLimit>
   <DisableAsyncIO>false</DisableAsyncIO>
-  <MigratedToUserItemShares4>true</MigratedToUserItemShares4>
+  <MigratedToUserItemShares8>true</MigratedToUserItemShares8>
   <MigratedLibraryOptionsToDb>true</MigratedLibraryOptionsToDb>
-  <AllowLegacyLocalNetworkPassword>true</AllowLegacyLocalNetworkPassword>
+  <AllowLegacyLocalNetworkPassword>false</AllowLegacyLocalNetworkPassword>
   <EnableSavedMetadataForPeople>false</EnableSavedMetadataForPeople>
-  <ProxyHeaderMode>RemoteAddressesOnly</ProxyHeaderMode>
+  <TvChannelsRefreshed>true</TvChannelsRefreshed>
+  <ProxyHeaderMode>AllAddresses</ProxyHeaderMode>
 </ServerConfiguration>

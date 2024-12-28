@@ -7,12 +7,11 @@ type: public
 encoding: UTF-8
 requestDelay: 2
 links:
-  - https://solidtorrents.to/
-  - https://solidtorrents.nocensor.cloud/
+  - https://solidtorrents.eu/
 legacylinks:
   - https://solidtorrents.net/
-  - https://solidtorrents.nocensor.click/
-  - https://solidtorrents.eu/
+  - https://solidtorrents.nocensor.cloud/
+  - https://solidtorrents.to/
 
 caps:
   categories:
@@ -40,6 +39,7 @@ caps:
     "Other/Source Code": PC
     "Other/Video": TV
     Softwares: PC/0day
+    "Softwares/Mac": PC/Mac
     "Softwares/Windows": PC/0day
     TV: TV
     Unknown: Other
@@ -53,6 +53,10 @@ caps:
     book-search: [q]
 
 settings:
+  - name: prefer_magnet_links
+    type: checkbox
+    label: Prefer Magnet Links
+    default: false
   - name: sort
     type: select
     label: Sort requested from site
@@ -78,6 +82,8 @@ search:
     sort: "{{ .Config.sort }}"
     order: "{{ .Config.type }}"
     limit: 100
+    page: 1
+  allowEmptyInputs: true
 
   rows:
     selector: li.search-result:has(a[class="dl-torrent"])
@@ -86,12 +92,19 @@ search:
     category:
       selector: a.category
     title:
-      selector: h5
+      selector: h5 a
     details:
       selector: h5 a
       attribute: href
-    download:
+    download_optional:
       selector: a[class="dl-torrent"]
+      attribute: href
+      optional: true
+    download:
+      text: "{{ if .Config.prefer_magnet_links }}{{ else }}{{ .Result.download_optional }}{{ end }}"
+      optional: true
+    magnet:
+      selector: a[href^="magnet:?xt"]
       attribute: href
     infohash:
       selector: a[href^="magnet:?xt"]

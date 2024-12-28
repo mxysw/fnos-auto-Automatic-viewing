@@ -73,6 +73,7 @@ login:
     - selector: a[href*="/login"]
       message:
         text: "The API key was not accepted by {{ .Config.sitelink }}."
+    - selector: :root:contains("Account is Banned")
 
 search:
   paths:
@@ -153,6 +154,8 @@ search:
     genre:
       selector: meta.genres
       filters:
+        - name: re_replace
+          args: ["(?i)^None$", ""]
         - name: re_replace
           args: ["(?i)(Ciencia ficción)", "Ciencia_ficción"]
         - name: re_replace

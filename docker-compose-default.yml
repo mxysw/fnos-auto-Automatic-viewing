@@ -4,9 +4,10 @@ networks:
     driver: bridge
     ipam:
       config:
-      - subnet: 172.128.2.0/24
+        - subnet: 172.128.2.0/24
 
 services:
+           
   heimdall:
     image: linuxserver/heimdall:latest
     container_name: heimdall1
@@ -23,7 +24,6 @@ services:
       network:
         ipv4_address: 172.128.2.11
 
-  
   flaresolverr:
     image: flaresolverr/flaresolverr:latest
     container_name: flaresolverr
@@ -40,17 +40,15 @@ services:
     networks:
       network:
         ipv4_address: 172.128.2.13
-
-
+ 
   jproxy:
-    image: luckypuppy514/jproxy:latest
-    container_name: jproxy1
+    image: mxy6662/jproxy:latest
+    container_name: jproxy
     restart: unless-stopped
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
       - TZ=${TZ}
-      - JAVA_OPTS=-Xms512m -Xmx512m
     volumes:
       - ${CONFIG_PATH}/jproxy/database:/app/database
     ports:
@@ -97,7 +95,6 @@ services:
       network:
         ipv4_address: 172.128.2.17
     depends_on:
-      - jproxy
       - qbittorrent
 
   sonarr:
@@ -117,7 +114,6 @@ services:
       network:
         ipv4_address: 172.128.2.18
     depends_on:
-      - jproxy
       - qbittorrent
 
   qbittorrent:
@@ -171,14 +167,16 @@ services:
       - TZ=${TZ}
       - PERMS=true
       - UMASK=022
+      - HTTP_PROXY=http://meta:7890
+      - NO_PROXY=172.128.2.20
     hostname: chinesesubfinder
     ports:
       - 60221:19035
       - 19037:19037
     logging:
-        driver: "json-file"
-        options:
-          max-size: "100m"
+      driver: "json-file"
+      options:
+        max-size: "100m"
     networks:
       network:
         ipv4_address: 172.128.2.21
@@ -199,3 +197,29 @@ services:
       network:
         ipv4_address: 172.128.2.23
 
+  metacubexd:
+    container_name: metacubexd
+    image: ghcr.io/metacubex/metacubexd
+    restart: always
+    ports:
+      - '7100:80'
+    networks:
+      network:
+        ipv4_address: 172.128.2.24
+
+  meta:
+    container_name: meta
+    image: docker.io/metacubex/mihomo:Alpha
+    restart: always
+    volumes:
+      - ${CONFIG_PATH}/mihomo:/root/.config/mihomo
+    ports:
+      - '9090:9090'
+      - '7890:7890/tcp'
+      - '7890:7890/udp'
+    networks:
+      network:
+        ipv4_address: 172.128.2.25
+
+    devices:
+      - /dev/dri:/dev/dri

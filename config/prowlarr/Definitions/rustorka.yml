@@ -4,9 +4,11 @@ name: Rustorka
 description: "Rustorka is a RUSSIAN Semi-Private Torrent Tracker for TV / MOVIES / GENERAL"
 language: ru-RU
 type: semi-private
-encoding: windows-1251
+encoding: UTF-8
 links:
-  - http://rustorka.com/ # site forces http, does not support https
+  - https://rustorka.com/
+legacylinks:
+  - http://rustorka.com/
 
 caps:
   categorymappings:
@@ -335,6 +337,7 @@ caps:
     - {id: 1865, cat: TV, desc: " |- HDTVRip / HDTVRip-AVC"}
     - {id: 1864, cat: TV, desc: " |- WEB DL / HDTV 720"}
     - {id: 1863, cat: TV, desc: " |- WEB DL / HDTV 1080"}
+    - {id: 2059, cat: TV, desc: " |- WEB DL / HDTV 2160p"}
     - {id: 1855, cat: TV, desc: "Американские"}
     - {id: 1861, cat: TV, desc: " |- DVDRip"}
     - {id: 1860, cat: TV, desc: " |- SatRip"}
@@ -342,6 +345,7 @@ caps:
     - {id: 1858, cat: TV, desc: " |- HDTVRip / HDRip / AVC"}
     - {id: 1857, cat: TV, desc: " |- WEB DL / HD / BDRip 720"}
     - {id: 1856, cat: TV, desc: " |- WEB DL / HD / BDRip 1080"}
+    - {id: 2055, cat: TV, desc: " |- WEB DL / HDTV 2160p"}
     - {id: 1848, cat: TV, desc: "Европейские / Другие"}
     - {id: 1854, cat: TV, desc: " |- DVDRip"}
     - {id: 1853, cat: TV, desc: " |- SatRip"}
@@ -349,6 +353,7 @@ caps:
     - {id: 1851, cat: TV, desc: " |- HDTVRip / HDRip / AVC"}
     - {id: 1850, cat: TV, desc: " |- WEB DL / HD / BDRip 720"}
     - {id: 1849, cat: TV, desc: " |- WEB DL / HD / BDRip 1080"}
+    - {id: 2056, cat: TV, desc: " |- WEB DL / HDTV 2160p"}
     - {id: 1841, cat: TV, desc: "Российские"}
     - {id: 1847, cat: TV, desc: " |- DVDRip"}
     - {id: 1846, cat: TV, desc: " |- SatRip"}
@@ -356,6 +361,7 @@ caps:
     - {id: 1844, cat: TV, desc: " |- HDTVRip / HDRip / AVC"}
     - {id: 1843, cat: TV, desc: " |- WEB DL / HD / BDRip 720"}
     - {id: 1842, cat: TV, desc: " |- WEB DL / HD / BDRip 1080"}
+    - {id: 2057, cat: TV, desc: " |- WEB DL / HDTV 2160p"}
     - {id: 1871, cat: TV, desc: "Мультсериалы"}
     - {id: 1877, cat: TV, desc: " |- DVDRip"}
     - {id: 1876, cat: TV, desc: " |- SatRip"}
@@ -363,6 +369,7 @@ caps:
     - {id: 1874, cat: TV, desc: " |- HDTVRip / HDRip / AVC"}
     - {id: 1873, cat: TV, desc: " |- WEB DL / HD / BDRip 720"}
     - {id: 1872, cat: TV, desc: " |- WEB DL / HD / BDRip 1080"}
+    - {id: 2058, cat: TV, desc: " |- WEB DL / HDTV 2160p"}
     # Аниме
     # Anime
     - {id: 1879, cat: TV/Anime, desc: "Аниме"}
@@ -775,10 +782,8 @@ settings:
   - name: cookie
     type: text
     label: Cookie
-  - name: info
-    type: info
-    label: How to get the Cookie
-    default: "<ol><li>Login to this tracker with your browser</li><li>Open the <b>DevTools</b> panel by pressing <b>F12</b></li><li>Select the <b>Network</b> tab</li><li>Click on the <b>Doc</b> button (Chrome Browser) or <b>HTML</b> button (FireFox)</li><li>Refresh the page by pressing <b>F5</b></li><li>Click on the first row entry</li><li>Select the <b>Headers</b> tab on the Right panel</li><li>Find <b>'cookie:'</b> in the <b>Request Headers</b> section</li><li><b>Select</b> and <b>Copy</b> the whole cookie string <i>(everything after 'cookie: ')</i> and <b>Paste</b> here.</li></ol>"
+  - name: info_cookie
+    type: info_cookie
   - name: stripcyrillic
     type: checkbox
     label: Strip Cyrillic Letters
@@ -879,6 +884,9 @@ search:
       args: ["(?i)\\bE0*(\\d+)\\b", "сери $1"]
     - name: re_replace # S01E02 to сезон 1 сери 2
       args: ["(?i)\\bS0*(\\d+)E0*(\\d+)\\b", "сезон $1 сери $2"]
+
+  headers:
+    Cookie: ["godbayadblock=godbayadblock"]
 
   rows:
     selector: tr[id^="tor_"]:has(a[href^="./download.php?id="])

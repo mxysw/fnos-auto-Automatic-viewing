@@ -1,7 +1,7 @@
 ---
 id: portugas-api
 name: Portugas (API)
-description: "Portugas is a Private Portoguese Tracker"
+description: "Portugas is a Private PORTUGUESE Tracker"
 language: pt-PT
 type: private
 encoding: UTF-8
@@ -55,6 +55,10 @@ settings:
     options:
       desc: desc
       asc: asc
+  - name: info_activity
+    type: info
+    label: Account Inactivity
+    default: "All users must log into their account at least once every 60 days, otherwise the account will be deactivated."
 
 login:
   path: /api/torrents
@@ -64,11 +68,12 @@ login:
     - selector: a[href*="/login"]
       message:
         text: "The API key was not accepted by {{ .Config.sitelink }}."
+    - selector: :root:contains("Account is Banned")
 
 search:
   paths:
-    # https://github.com/HDInnovations/UNIT3D-Community-Edition/wiki/Torrent-API-(UNIT3D-v7.0.0)
-    # https://github.com/HDInnovations/UNIT3D-Community-Edition/blob/master/app/Http/Controllers/API/TorrentController.php#L349
+    # https://github.com/HDInnovations/UNIT3D-Community-Edition/wiki/Torrent-API-(UNIT3D-v8.x.x)
+    # https://github.com/HDInnovations/UNIT3D-Community-Edition/blob/master/app/Http/Controllers/API/TorrentController.php#L476
     - path: "/api/torrents/filter"
       response:
         type: json
@@ -129,6 +134,8 @@ search:
       selector: meta.genres
       filters:
         - name: re_replace
+          args: ["(?i)^None$", ""]
+        - name: re_replace
           args: ["(?i)(Ficção científica)", "Ficção_científica"]
         - name: re_replace
           args: ["(?i)(Cinema TV)", "Cinema_TV"]
@@ -171,7 +178,7 @@ search:
         0: 1 # normal
         1: 2 # double
     minimumratio:
-      text: 1.1
+      text: 1.0
     minimumseedtime:
       # 3 days (as seconds = 3 x 24 x 60 x 60)
       text: 259200

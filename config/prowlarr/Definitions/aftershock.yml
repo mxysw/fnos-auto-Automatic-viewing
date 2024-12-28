@@ -84,6 +84,10 @@ settings:
     options:
       desc: desc
       asc: asc
+  - name: info_activity
+    type: info
+    label: Account Inactivity
+    default: "You will be immediately banned if you have not logged in for more than 6 weeks."
 
 login:
   path: takelogin.php
@@ -111,7 +115,7 @@ search:
     type: "{{ .Config.type }}"
 
   rows:
-    selector: table tbody#torrent_background tr:has(a.index)
+    selector: table tbody#torrent_background tr:has(a.index):has(span.icon_check_alt)
     filters:
       - name: andmatch
 

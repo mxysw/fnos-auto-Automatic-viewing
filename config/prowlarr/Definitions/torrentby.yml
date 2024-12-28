@@ -5,6 +5,7 @@ description: "torrent.by is a BELARUSIAN public Torrent Tracker"
 language: ru-RU
 type: public
 encoding: UTF-8
+requestDelay: 5
 links:
   - https://torrent.by/
 legacylinks:
@@ -30,14 +31,12 @@ settings:
     type: checkbox
     label: Add RUS to end of all titles to improve language detection by Sonarr and Radarr. Will cause English-only results to be misidentified.
     default: false
-  - name: info_8000
-    type: info
-    label: About torrent.by Categories
-    default: torrent.by does not return categories in its search results.</br>To add to your Apps' Torznab indexer, replace all categories with 8000(Other).
+  - name: info_category_8000
+    type: info_category_8000
 
 search:
   paths:
-    - path: "{{ if .Keywords }}search/?search={{ .Keywords }}&cat=0&search_in=0{{ else }}today{{ end }}"
+    - path: "{{ if .Keywords }}search/?search={{ .Keywords }}&cat=0&search_in=0{{ else }}today/{{ end }}"
 
   keywordsfilters:
     # strip season and/or ep
