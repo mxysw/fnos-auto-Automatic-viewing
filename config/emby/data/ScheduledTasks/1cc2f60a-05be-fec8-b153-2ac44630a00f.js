@@ -1,1 +1,1 @@
-{"StartTimeUtc":"2025-01-01T06:13:31.2421906Z","EndTimeUtc":"2025-01-01T06:13:33.2624888Z","Status":"Completed","Name":"Check for application updates","Key":"SystemUpdateTask","Id":"1cc2f60a05befec8b1532ac44630a00f"}
+{"StartTimeUtc":"2025-01-01T10:02:00.0634759Z","EndTimeUtc":"2025-01-01T10:02:20.3656018Z","Status":"Completed","Name":"Check for application updates","Key":"SystemUpdateTask","Id":"1cc2f60a05befec8b1532ac44630a00f"}
