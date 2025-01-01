@@ -5,8 +5,10 @@ description: "HHanClub is a CHINESE Private Torrent Tracker for HD MOVIES / TV"
 language: zh-CN
 type: private
 encoding: UTF-8
+followredirect: true
 links:
   - https://hhanclub.top/
+  - https://hhan.club/
 
 caps:
   categorymappings:
@@ -78,7 +80,7 @@ login:
     selector: img[alt="CAPTCHA"]
     input: imagestring
   inputs:
-    secret: <?php echo $secret ?>
+    secret: ""
     username: "{{ .Config.username }}"
     password: "{{ .Config.password }}"
     two_step_code: "{{ .Config.2facode }}"
@@ -93,6 +95,8 @@ login:
 search:
   paths:
     - path: torrents.php
+      # required to bypass validation check
+      followredirect: true
   inputs:
     $raw: "{{ range .Categories }}cat[]{{.}}=1&{{end}}"
     search: "{{ if .Query.IMDBID }}{{ .Query.IMDBID }}{{ else }}{{ end }}{{ if or .Query.IMDBID .Query.DoubanID }} {{ else }}{{ .Keywords }}{{ end }}{{ if .Query.DoubanID }}{{ .Query.DoubanID }}{{ else }}{{ end }}"
@@ -108,10 +112,21 @@ search:
     type: "{{ .Config.type }}"
     notnewword: 1
 
+  keywordsfilters:
+    # strip episode
+    - name: re_replace
+      args: ["\\b(S\\d{2,})?(?:E\\d{2,})\\b", "$1"]
+
   rows:
     selector: div.w-full:has(a[href^="details.php?id="])
 
   fields:
+    _episode_number:
+      selector: div.torrent-title > div > div
+      optional: true
+      filters:
+        - name: regexp
+          args: "第(\\d+(?:-\\d+)?)集"
     category:
       selector: a[href^="?cat[]="]
       attribute: href
@@ -120,6 +135,9 @@ search:
           args: cat[]
     title:
       selector: a[href^="details.php?id="]
+      filters:
+        - name: re_replace
+          args: ["\\b(S\\d+)\\b", "{{ if .Result._episode_number }}$1E{{ .Result._episode_number }}{{ else }}$1{{ end }}"]
     details:
       selector: a[href^="details.php?id="]
       attribute: href

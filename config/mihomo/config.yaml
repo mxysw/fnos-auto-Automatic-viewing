@@ -23,7 +23,7 @@ proxy-providers:
   Flower:
     type: http
     # 修改为你的 Clash 订阅链接
-    urli: https://onlysub.mjurl.com/api/v1/client/subscribe?token=27ea8137c168b95e3e343405bfc8833d
+    url: https://mojie.co/api/v1/client/subscribe?token=1100cc2db49317be0f6e3b29ce8508fe
     path: ./profiles/flower.yml
     interval: 86400
     health-check:
