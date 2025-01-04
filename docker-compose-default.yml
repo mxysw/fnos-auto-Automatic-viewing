@@ -221,5 +221,22 @@ services:
       network:
         ipv4_address: 172.128.2.25
 
-    devices:
-      - /dev/dri:/dev/dri
+  emby:
+    image: emby/embyserver:latest
+    container_name: emby1
+    restart: unless-stopped
+    environment:
+      - UID=0
+      - GID=0
+      - GIDLIST=0
+      - TZ=${TZ}
+    volumes:
+      - ${CONFIG_PATH}/emby:/config
+      - ${MEDIA_PATH}:/media/video
+    ports:
+      - 60220:8096
+    networks:
+      network:
+        ipv4_address: 172.128.2.20
+
+

@@ -1,1 +1,1 @@
-{"StartTimeUtc":"2024-12-31T14:23:13.0330968Z","EndTimeUtc":"2024-12-31T14:23:13.4161197Z","Status":"Completed","Name":"Cache file cleanup","Key":"DeleteCacheFiles","Id":"241d4fcb19a1d557ee62428e411da609"}
+{"StartTimeUtc":"2025-01-03T09:22:23.2723989Z","EndTimeUtc":"2025-01-03T09:22:24.0219396Z","Status":"Completed","Name":"Cache file cleanup","Key":"DeleteCacheFiles","Id":"241d4fcb19a1d557ee62428e411da609"}

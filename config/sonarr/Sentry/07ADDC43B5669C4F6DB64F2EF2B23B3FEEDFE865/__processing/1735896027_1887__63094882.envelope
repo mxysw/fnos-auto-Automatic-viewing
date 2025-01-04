@@ -1,0 +1,3 @@
+{"sdk":{"name":"sentry.dotnet","version":"4.0.2"}}
+{"type":"session","length":285}
+{"sid":"b1ed502428eb4aee90055a3287cff635","did":"e00409fc-bf6b-412a-afd3-4d54d6d0b261","init":true,"started":"2025-01-03T17:20:26.8407084+08:00","timestamp":"2025-01-03T09:20:26.8428209+00:00","seq":0,"duration":0,"errors":0,"attrs":{"release":"4.0.11.2680-main","environment":"main"}}
