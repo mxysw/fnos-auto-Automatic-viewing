@@ -1,1 +1,1 @@
-sudo chmod -R 777 * && sudo ./install.sh
+`sudo chmod -R 777 * && sudo ./install.sh`
