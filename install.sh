@@ -1,11 +1,6 @@
 #!/bin/bash
 #
 # https://github.com/LuckyPuppy514/automatic-theater/install.sh
-# 作者：LuckyPuppy514
-# 时间：2022-08-25
-#
-# 本脚本用于安装 automatic-theater
-#
 
 set -e
 
