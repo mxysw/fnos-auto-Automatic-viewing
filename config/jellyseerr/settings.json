@@ -27,8 +27,8 @@
    "hostname": "172.128.2.25",
    "port": "7890",
    "useSsl": false,
-   "user": "root",
-   "password": "password",
+   "user": "",
+   "password": "",
    "bypassFilter": "172.128.2.17,172.128.2.18,172.128.2.20",
    "bypassLocalAddresses": true
   }

@@ -21,6 +21,7 @@ caps:
     - {id: 405, cat: TV/Anime, desc: "动漫"}
     - {id: 404, cat: TV/Documentary, desc: "纪录片"}
     - {id: 401, cat: Movies, desc: "电影"}
+    - {id: 412, cat: Audio/Video, desc: "短剧"}
 
   modes:
     search: [q]
@@ -98,7 +99,7 @@ search:
       # required to bypass validation check
       followredirect: true
   inputs:
-    $raw: "{{ range .Categories }}cat[]{{.}}=1&{{end}}"
+    $raw: "{{ range .Categories }}cat[]={{.}}&{{end}}"
     search: "{{ if .Query.IMDBID }}{{ .Query.IMDBID }}{{ else }}{{ end }}{{ if or .Query.IMDBID .Query.DoubanID }} {{ else }}{{ .Keywords }}{{ end }}{{ if .Query.DoubanID }}{{ .Query.DoubanID }}{{ else }}{{ end }}"
     # 0 incldead, 1 active, 2 dead
     incldead: 0
@@ -191,11 +192,12 @@ search:
         span.promotion-tag-free2up: 2
         span.promotion-tag-2up: 2
         "*": 1
-    minimumratio:
-      text: 1.0
+# global MR is 0.8 but torrents must be seeded for 2 days regardless of ratio
+#    minimumratio:
+#      text: 0.8
     minimumseedtime:
-      # 1 day (as seconds = 24 x 60 x 60)
-      text: 86400
+      # 2 days (as seconds = 2 x 24 x 60 x 60)
+      text: 172800
     description:
       selector: div.torrent-title > div > div
 # NexusPHP v1.8.6 2023-08-15 (customised)
