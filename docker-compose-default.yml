@@ -136,24 +136,6 @@ services:
       network:
         ipv4_address: 172.128.2.19
 
-  emby:
-    image: emby/embyserver:latest
-    container_name: emby1
-    restart: unless-stopped
-    environment:
-      - UID=0
-      - GID=0
-      - GIDLIST=0
-      - TZ=${TZ}
-    volumes:
-      - ${CONFIG_PATH}/emby:/config
-      - ${MEDIA_PATH}:/media/video
-    ports:
-      - 60220:8096
-    networks:
-      network:
-        ipv4_address: 172.128.2.20
-
   chinesesubfinder:
     image: allanpk716/chinesesubfinder:latest-lite
     container_name: chinesesubfinder1
@@ -167,7 +149,7 @@ services:
       - TZ=${TZ}
       - PERMS=true
       - UMASK=022
-      - HTTP_PROXY=http://meta:7890
+      - HTTP_PROXY=http://172.128.2.25:7890
       - NO_PROXY=172.128.2.20
     hostname: chinesesubfinder
     ports:
@@ -222,7 +204,7 @@ services:
         ipv4_address: 172.128.2.25
 
   emby:
-    image: emby/embyserver:latest
+    image: linuxserver/emby:4.8.7.0
     container_name: emby1
     restart: unless-stopped
     environment:
@@ -230,6 +212,8 @@ services:
       - GID=0
       - GIDLIST=0
       - TZ=${TZ}
+      - HTTP_PROXY=http://172.128.2.25:7890
+      - NO_PROXY=172.128.2.20,172.128.2.21  
     volumes:
       - ${CONFIG_PATH}/emby:/config
       - ${MEDIA_PATH}:/media/video
@@ -238,5 +222,3 @@ services:
     networks:
       network:
         ipv4_address: 172.128.2.20
-
-

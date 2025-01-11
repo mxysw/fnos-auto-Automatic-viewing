@@ -19,17 +19,17 @@
   "region": "",
   "originalLanguage": "",
   "trustProxy": false,
-  "mediaServerType": 4,
+  "mediaServerType": 3,
   "partialRequestsEnabled": true,
-  "locale": "en",
+  "locale": "zh-CN",
   "proxy": {
-   "enabled": false,
-   "hostname": "",
-   "port": 8080,
+   "enabled": true,
+   "hostname": "172.128.2.25",
+   "port": "7890",
    "useSsl": false,
    "user": "",
    "password": "",
-   "bypassFilter": "",
+   "bypassFilter": "172.128.2.17,172.128.2.18,172.128.2.20",
    "bypassLocalAddresses": true
   }
  },
@@ -41,22 +41,92 @@
   "libraries": []
  },
  "jellyfin": {
-  "name": "",
-  "ip": "",
+  "name": "c07bef1ab545",
+  "ip": "172.128.2.20",
   "port": 8096,
   "useSsl": false,
   "urlBase": "",
   "externalHostname": "",
   "jellyfinForgotPasswordUrl": "",
-  "libraries": [],
-  "serverId": "",
-  "apiKey": ""
+  "libraries": [
+   {
+    "id": "3",
+    "name": "电影",
+    "enabled": true,
+    "type": "movie"
+   },
+   {
+    "id": "5",
+    "name": "电视剧",
+    "enabled": true,
+    "type": "show"
+   },
+   {
+    "id": "7",
+    "name": "动漫",
+    "enabled": true,
+    "type": "show"
+   }
+  ],
+  "serverId": "450fe8210b0b4bbdb772eb8643e797df",
+  "apiKey": "ced3bb690fa248f9bb9e0dba838f5df4"
  },
  "tautulli": {},
- "radarr": [],
- "sonarr": [],
+ "radarr": [
+  {
+   "name": "radarr",
+   "hostname": "172.128.2.17",
+   "port": 7878,
+   "apiKey": "e71771d7a55a4b318fc0a247cc4dcf85",
+   "useSsl": false,
+   "baseUrl": "",
+   "activeProfileId": 4,
+   "activeProfileName": "HD-1080p",
+   "activeDirectory": "/media/video/movie",
+   "is4k": false,
+   "minimumAvailability": "announced",
+   "tags": [
+    4
+   ],
+   "isDefault": true,
+   "syncEnabled": false,
+   "preventSearch": false,
+   "tagRequests": false,
+   "id": 0
+  }
+ ],
+ "sonarr": [
+  {
+   "name": "sonarr",
+   "hostname": "172.128.2.18",
+   "port": 8989,
+   "apiKey": "bd81b15d3a704ae7ad3135d67c8be155",
+   "useSsl": false,
+   "baseUrl": "",
+   "activeProfileId": 4,
+   "activeProfileName": "HD-1080p",
+   "activeDirectory": "/media/video/serial",
+   "animeSeriesType": "standard",
+   "activeAnimeProfileId": 4,
+   "activeAnimeProfileName": "HD-1080p",
+   "activeAnimeDirectory": "/media/video/anime",
+   "tags": [
+    1
+   ],
+   "animeTags": [
+    2
+   ],
+   "is4k": false,
+   "isDefault": true,
+   "enableSeasonFolders": false,
+   "syncEnabled": false,
+   "preventSearch": false,
+   "tagRequests": false,
+   "id": 0
+  }
+ ],
  "public": {
-  "initialized": false
+  "initialized": true
  },
  "notifications": {
   "agents": {
