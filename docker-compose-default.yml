@@ -204,7 +204,7 @@ services:
         ipv4_address: 172.128.2.25
 
   emby:
-    image: linuxserver/emby:4.8.7.0
+    image: linuxserver/emby:latest
     container_name: emby1
     restart: unless-stopped
     environment:
