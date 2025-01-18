@@ -1,0 +1,26 @@
+[
+  {
+    "id": "sitelink",
+    "type": "inputstring",
+    "name": "Site Link",
+    "value": "https://mikanani.me/"
+  },
+  {
+    "id": "cookieheader",
+    "type": "hiddendata",
+    "name": "CookieHeader",
+    "value": ".AspNetCore.Antiforgery.dIJyUX9c7XY=CfDJ8I2fezsYX9pEhooVpAPBEWrEtgqSZLBA_-vJJ6FbexRjY-idlKdUNSVo1ZIgGXLEYLIg93B8pbzKD5_6otZTlz4ynAxkAJTusprjx8KgonaXTfXwIiKo9vOnbYKGao0hVdPYGEVZxHc1lvd5vrhzByg"
+  },
+  {
+    "id": "lasterror",
+    "type": "hiddendata",
+    "name": "LastError",
+    "value": null
+  },
+  {
+    "id": "tags",
+    "type": "inputtags",
+    "name": "Tags",
+    "value": ""
+  }
+]

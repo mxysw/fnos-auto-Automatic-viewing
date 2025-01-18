@@ -55,7 +55,7 @@ echo "✅  创建目录成功"
 echo ""
 echo "修改目录权限 ......"
 sudo chown -R ${USERNAME}:${GROUPNAME} ${MEDIA_PATH}
-sudo chmod -R 770 ${MEDIA_PATH}
+sudo chmod -R 777 ${MEDIA_PATH}
 echo "✅  修改媒体目录权限成功"
 
 echo "|"

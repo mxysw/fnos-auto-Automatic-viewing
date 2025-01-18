@@ -1,0 +1,1 @@
+{"StartTimeUtc":"2025-01-18T08:00:31.5201752Z","EndTimeUtc":"2025-01-18T08:00:32.0261526Z","Status":"Completed","Name":"Scan Metadata Folder","Key":"ScanInternalMetadataFolderTask","Id":"66ff02a80e8afc5da71945716f0f53e3"}

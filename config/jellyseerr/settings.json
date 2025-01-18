@@ -22,10 +22,9 @@
   "trustProxy": false,
   "mediaServerType": 3,
   "partialRequestsEnabled": true,
-  "enableSpecialEpisodes": false,
   "locale": "zh-CN",
   "proxy": {
-   "enabled": true,
+   "enabled": false,
    "hostname": "172.128.2.25",
    "port": "7890",
    "useSsl": false,
@@ -33,7 +32,8 @@
    "password": "",
    "bypassFilter": "172.128.2.17,172.128.2.18,172.128.2.20",
    "bypassLocalAddresses": true
-  }
+  },
+  "enableSpecialEpisodes": false
  },
  "plex": {
   "name": "",
@@ -43,9 +43,9 @@
   "libraries": []
  },
  "jellyfin": {
-  "name": "c07bef1ab545",
-  "ip": "172.128.2.20",
-  "port": 8096,
+  "name": "1f5f5c7e0374",
+  "ip": "192.168.31.142",
+  "port": 60220,
   "useSsl": false,
   "urlBase": "",
   "externalHostname": "",
@@ -58,20 +58,20 @@
     "type": "movie"
    },
    {
-    "id": "5",
+    "id": "44",
     "name": "电视剧",
     "enabled": true,
     "type": "show"
    },
    {
-    "id": "7",
+    "id": "70",
     "name": "动漫",
     "enabled": true,
     "type": "show"
    }
   ],
-  "serverId": "450fe8210b0b4bbdb772eb8643e797df",
-  "apiKey": "ced3bb690fa248f9bb9e0dba838f5df4"
+  "serverId": "77d804d5e4a84fc6800b98aaa64b1ea1",
+  "apiKey": "23d070e206c44234a0dadfc4c1abab20"
  },
  "tautulli": {},
  "radarr": [
@@ -175,8 +175,8 @@
     "options": {
      "botAPI": "",
      "chatId": "",
-     "messageThreadId": "",
-     "sendSilently": false
+     "sendSilently": false,
+     "messageThreadId": ""
     }
    },
    "pushbullet": {

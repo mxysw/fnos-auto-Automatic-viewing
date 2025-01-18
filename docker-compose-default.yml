@@ -179,16 +179,6 @@ services:
       network:
         ipv4_address: 172.128.2.23
 
-  metacubexd:
-    container_name: metacubexd
-    image: ghcr.io/metacubex/metacubexd
-    restart: always
-    ports:
-      - '7100:80'
-    networks:
-      network:
-        ipv4_address: 172.128.2.24
-
   meta:
     container_name: meta
     image: docker.io/metacubex/mihomo:Alpha
@@ -203,17 +193,32 @@ services:
       network:
         ipv4_address: 172.128.2.25
 
+  jackett:
+    image: lscr.io/linuxserver/jackett:latest
+    container_name: jackett
+    restart: unless-stopped
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+      - AUTO_UPDATE=true
+    ports:
+      - 9117:9117
+    volumes:
+      - ${CONFIG_PATH}/jackett:/config
+    networks:
+      network: 
+        ipv4_address: 172.128.2.26
+
   emby:
-    image: linuxserver/emby:latest
-    container_name: emby1
+    image: mxy6662/emby:latest
+    container_name: emby
     restart: unless-stopped
     environment:
       - UID=0
       - GID=0
       - GIDLIST=0
       - TZ=${TZ}
-      - HTTP_PROXY=http://172.128.2.25:7890
-      - NO_PROXY=172.128.2.20,172.128.2.21  
     volumes:
       - ${CONFIG_PATH}/emby:/config
       - ${MEDIA_PATH}:/media/video
