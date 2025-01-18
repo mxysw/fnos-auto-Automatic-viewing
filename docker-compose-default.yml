@@ -7,22 +7,57 @@ networks:
         - subnet: 172.128.2.0/24
 
 services:
-           
-  heimdall:
-    image: linuxserver/heimdall:latest
-    container_name: heimdall1
+  homarr:
+    image: ghcr.io/ajnart/homarr:latest
+    container_name: homarr
     restart: unless-stopped
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
       - TZ=Asia/Shanghai
     volumes:
-      - ${CONFIG_PATH}/heimdall:/config
+      - /var/run/docker.sock:/var/run/docker.sock 
+      - ${CONFIG_PATH}/homarr/configs:/app/data/configs
+      - ${CONFIG_PATH}/homarr/icons:/app/public/icons
+      - ${CONFIG_PATH}/homarr/data:/data
     ports:
-      - 60211:443
+      - '60210:7575'
     networks:
       network:
-        ipv4_address: 172.128.2.11
+        ipv4_address: 172.128.2.10
+
+  whisparr:
+    container_name: whisparr
+    image: ghcr.io/hotio/whisparr
+    restart: unless-stopped
+    ports:
+      - "6969:6969"
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=Asia/Shanghai
+    volumes:
+      - ${CONFIG_PATH}/whisparr:/config
+      - ${MEDIA_PATH}:/media/able
+    networks:
+      network:
+        ipv4_address: 172.128.2.30
+
+          #  heimdall:
+          #    image: linuxserver/heimdall:latest
+          #    container_name: heimdall
+          #    restart: unless-stopped
+          #    environment:
+          #      - PUID=${PUID}
+          #      - PGID=${PGID}
+          #      - TZ=Asia/Shanghai
+          #    volumes:
+          #      - ${CONFIG_PATH}/heimdall:/config
+          #    ports:
+          #      - 60211:443
+          #    networks:
+          #      network:
+          #        ipv4_address: 172.128.2.11
 
   flaresolverr:
     image: flaresolverr/flaresolverr:latest
@@ -58,8 +93,8 @@ services:
         ipv4_address: 172.128.2.15
 
   jellyseerr:
-    image: fallenbagel/jellyseerr:latest
-    container_name: jellyseerr1
+    image: mxy6662/jellyseerr:latest
+    container_name: jellyseerr
     restart: unless-stopped
     environment:
       - LOG_LEVEL=info
@@ -80,7 +115,7 @@ services:
 
   radarr:
     image: linuxserver/radarr:latest
-    container_name: radarr1
+    container_name: radarr
     restart: unless-stopped
     environment:
       - PUID=${PUID}
@@ -99,7 +134,7 @@ services:
 
   sonarr:
     image: linuxserver/sonarr:latest
-    container_name: sonarr1
+    container_name: sonarr
     restart: unless-stopped
     environment:
       - PUID=${PUID}
@@ -118,7 +153,7 @@ services:
 
   qbittorrent:
     image: linuxserver/qbittorrent:latest
-    container_name: qbittorrent1
+    container_name: qbittorrent
     restart: unless-stopped
     environment:
       - PUID=${PUID}
@@ -136,9 +171,28 @@ services:
       network:
         ipv4_address: 172.128.2.19
 
+  # transmission:
+  #   image: lscr.io/linuxserver/transmission:latest
+  #   container_name: transmission
+  #   restart: unless-stopped
+  #   environment:
+  #     - PUID=${PUID}
+  #     - PGID=${PGID}
+  #     - TZ=${TZ}
+  #   ports:
+  #     - "9091:9091"
+  #     - "51413:51413"
+  #     - "51413:51413/udp"
+  #   volumes:
+  #     - ${CONFIG_PATH}/transmission/data:/config
+  #     - ${MEDIA_PATH}/downloads:/downloads
+  #   networks:
+  #     network:
+  #       ipv4_address: 172.128.2.28
+
   chinesesubfinder:
     image: allanpk716/chinesesubfinder:latest-lite
-    container_name: chinesesubfinder1
+    container_name: chinesesubfinder
     restart: unless-stopped
     volumes:
       - ${CONFIG_PATH}/chinesesubfinder:/config
@@ -215,9 +269,8 @@ services:
     container_name: emby
     restart: unless-stopped
     environment:
-      - UID=0
-      - GID=0
-      - GIDLIST=0
+      - PUID=${PUID}
+      - PGID=${PGID}
       - TZ=${TZ}
     volumes:
       - ${CONFIG_PATH}/emby:/config
