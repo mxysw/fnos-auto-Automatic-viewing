@@ -1,9 +1,9 @@
 {
- "clientId": "d0625905-7c70-4865-ad00-1928686fa58b",
- "vapidPrivate": "InMJm0amTW2IkFljZtzBbJnqjM11yyncypVI0lBQywU",
- "vapidPublic": "BJZHwd6JwazXydU3avRPHXGmZ-KOmwOIK4jTlVaW4JqXY_iB-d6G3YiwP5icZK39ZT8AwgPL6hb77-hXY4q92HU",
+ "clientId": "dacc33e8-de23-447e-99b1-70a8473a7af9",
+ "vapidPrivate": "pRIl_3RFo1_vSl6iwgguaC3Fz6DnT1a1AN6TgZWJS4k",
+ "vapidPublic": "BGM14CCzglT8aPw0odfmeXGl67or9igwQsLaS1ny2I5Yc6Uj5lw3ew-7cp5uPDu51N2Ks0egTyaLbHUD_ySHslo",
  "main": {
-  "apiKey": "MTczMzk3NTA1OTYyMzA4OTcwOWVkLTczOTMtNDI2OC1hNWMzLTY4MzUxYzIxMTNlYw==",
+  "apiKey": "MTczNzIyNDIyNjYxNzg5MGM5NDJkLWUwMTEtNDc0NS04M2RmLTIxZDM3NmIxMzM3Ng==",
   "applicationTitle": "Jellyseerr",
   "applicationUrl": "",
   "csrfProtection": false,
@@ -25,15 +25,14 @@
   "locale": "zh-CN",
   "proxy": {
    "enabled": false,
-   "hostname": "172.128.2.25",
-   "port": "7890",
+   "hostname": "",
+   "port": 8080,
    "useSsl": false,
    "user": "",
    "password": "",
-   "bypassFilter": "172.128.2.17,172.128.2.18,172.128.2.20",
+   "bypassFilter": "",
    "bypassLocalAddresses": true
-  },
-  "enableSpecialEpisodes": false
+  }
  },
  "plex": {
   "name": "",
@@ -43,20 +42,14 @@
   "libraries": []
  },
  "jellyfin": {
-  "name": "1f5f5c7e0374",
-  "ip": "192.168.31.142",
-  "port": 60220,
+  "name": "80c0f8496d6c",
+  "ip": "172.128.2.20",
+  "port": 8096,
   "useSsl": false,
   "urlBase": "",
   "externalHostname": "",
   "jellyfinForgotPasswordUrl": "",
   "libraries": [
-   {
-    "id": "3",
-    "name": "电影",
-    "enabled": true,
-    "type": "movie"
-   },
    {
     "id": "44",
     "name": "电视剧",
@@ -68,10 +61,16 @@
     "name": "动漫",
     "enabled": true,
     "type": "show"
+   },
+   {
+    "id": "528",
+    "name": "电影",
+    "enabled": true,
+    "type": "movie"
    }
   ],
   "serverId": "77d804d5e4a84fc6800b98aaa64b1ea1",
-  "apiKey": "23d070e206c44234a0dadfc4c1abab20"
+  "apiKey": "d3e6ce612a22438398c0b5aec2833516"
  },
  "tautulli": {},
  "radarr": [
@@ -81,12 +80,11 @@
    "port": 7878,
    "apiKey": "e71771d7a55a4b318fc0a247cc4dcf85",
    "useSsl": false,
-   "baseUrl": "",
    "activeProfileId": 4,
    "activeProfileName": "HD-1080p",
    "activeDirectory": "/media/video/movie",
    "is4k": false,
-   "minimumAvailability": "announced",
+   "minimumAvailability": "released",
    "tags": [
     4
    ],
@@ -104,11 +102,9 @@
    "port": 8989,
    "apiKey": "bd81b15d3a704ae7ad3135d67c8be155",
    "useSsl": false,
-   "baseUrl": "",
    "activeProfileId": 4,
    "activeProfileName": "HD-1080p",
    "activeDirectory": "/media/video/serial",
-   "animeSeriesType": "standard",
    "activeAnimeProfileId": 4,
    "activeAnimeProfileName": "HD-1080p",
    "activeAnimeDirectory": "/media/video/anime",
@@ -120,7 +116,7 @@
    ],
    "is4k": false,
    "isDefault": true,
-   "enableSeasonFolders": false,
+   "enableSeasonFolders": true,
    "syncEnabled": false,
    "preventSearch": false,
    "tagRequests": false,
@@ -175,8 +171,7 @@
     "options": {
      "botAPI": "",
      "chatId": "",
-     "sendSilently": false,
-     "messageThreadId": ""
+     "sendSilently": false
     }
    },
    "pushbullet": {
@@ -225,7 +220,7 @@
    "schedule": "0 0 3 * * *"
   },
   "plex-watchlist-sync": {
-   "schedule": "0 */10 * * * *"
+   "schedule": "0 */3 * * * *"
   },
   "plex-refresh-token": {
    "schedule": "0 0 5 * * *"
