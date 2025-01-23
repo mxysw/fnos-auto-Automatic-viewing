@@ -23,11 +23,67 @@
   ],
   "apps": [
     {
-      "id": "84eaf501-8d9f-4391-987b-91a4a467805a",
-      "name": "flaresolverr",
-      "url": "https://homarr.dev",
+      "id": "4078bd7f-5ca3-4036-86b8-6627872c6231",
+      "name": "emby",
+      "url": "http://emby:8989",
       "appearance": {
-        "iconUrl": "/imgs/logo/logo.png",
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/emby.svg",
+        "appNameStatus": "normal",
+        "positionAppName": "column",
+        "lineClampAppName": 1,
+        "appNameFontSize": 16
+      },
+      "network": {
+        "enabledStatusChecker": true,
+        "statusCodes": [
+          "200"
+        ]
+      },
+      "behaviour": {
+        "isOpeningNewTab": true,
+        "externalUrl": "http://[homarr_hostname]:60220",
+        "tooltipDescription": "媒体播放器"
+      },
+      "area": {
+        "type": "wrapper",
+        "properties": {
+          "id": "default"
+        }
+      },
+      "shape": {
+        "lg": {
+          "location": {
+            "x": 4,
+            "y": 2
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        }
+      },
+      "integration": {
+        "type": "jellyfin",
+        "properties": [
+          {
+            "field": "username",
+            "type": "public",
+            "value": "root"
+          },
+          {
+            "field": "password",
+            "type": "private",
+            "value": "password"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ad00ee94-b7ec-4943-b208-c63c7d7cec39",
+      "name": "prowlarr",
+      "url": "http://prowlarr:969",
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/prowlarr.svg",
         "appNameStatus": "normal",
         "positionAppName": "column",
         "lineClampAppName": 1,
@@ -46,7 +102,8 @@
       },
       "behaviour": {
         "isOpeningNewTab": true,
-        "externalUrl": "https://homarr.dev"
+        "externalUrl": "http://[homarr_hostname]:60223",
+        "tooltipDescription": "资源检索工具"
       },
       "area": {
         "type": "wrapper",
@@ -57,7 +114,7 @@
       "shape": {
         "lg": {
           "location": {
-            "x": 3,
+            "x": 2,
             "y": 3
           },
           "size": {
@@ -69,60 +126,6 @@
       "integration": {
         "type": null,
         "properties": []
-      },
-      "port": 60213,
-      "icon": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/flaresolverr.svg",
-      "wrapperId": "default"
-    },
-    {
-      "id": "1f47523e-2a8a-4cc5-89b3-be01002512d6",
-      "name": "jellyseerr",
-      "url": "http://jellyseerr:5055",
-      "appearance": {
-        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/jellyseerr.svg",
-        "appNameStatus": "normal",
-        "positionAppName": "column",
-        "lineClampAppName": 1,
-        "appNameFontSize": 16
-      },
-      "network": {
-        "enabledStatusChecker": true,
-        "statusCodes": [
-          "200"
-        ]
-      },
-      "behaviour": {
-        "isOpeningNewTab": true,
-        "externalUrl": "http://[homarr_hostname]:60216",
-        "tooltipDescription": "媒体请求服务器"
-      },
-      "area": {
-        "type": "wrapper",
-        "properties": {
-          "id": "default"
-        }
-      },
-      "shape": {
-        "lg": {
-          "location": {
-            "x": 0,
-            "y": 2
-          },
-          "size": {
-            "width": 1,
-            "height": 1
-          }
-        }
-      },
-      "integration": {
-        "type": "jellyseerr",
-        "properties": [
-          {
-            "field": "apiKey",
-            "type": "private",
-            "value": "MTczMzk3NTA1OTYyMzA4OTcwOWVkLTczOTMtNDI2OC1hNWMzLTY4MzUxYzIxMTNlYw=="
-          }
-        ]
       }
     },
     {
@@ -224,6 +227,57 @@
       "integration": {
         "type": null,
         "properties": []
+      }
+    },
+    {
+      "id": "1f47523e-2a8a-4cc5-89b3-be01002512d6",
+      "name": "jellyseerr",
+      "url": "http://172.128.2.16:5055",
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/jellyseerr.svg",
+        "appNameStatus": "normal",
+        "positionAppName": "column",
+        "lineClampAppName": 1,
+        "appNameFontSize": 16
+      },
+      "network": {
+        "enabledStatusChecker": true,
+        "statusCodes": [
+          "200"
+        ]
+      },
+      "behaviour": {
+        "isOpeningNewTab": true,
+        "externalUrl": "http://[homarr_hostname]:60216",
+        "tooltipDescription": "媒体请求服务器"
+      },
+      "area": {
+        "type": "wrapper",
+        "properties": {
+          "id": "default"
+        }
+      },
+      "shape": {
+        "lg": {
+          "location": {
+            "x": 0,
+            "y": 2
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        }
+      },
+      "integration": {
+        "type": "jellyseerr",
+        "properties": [
+          {
+            "field": "apiKey",
+            "type": "private",
+            "value": "MTczNzIyNDIyNjYxNzg5MGM5NDJkLWUwMTEtNDc0NS04M2RmLTIxZDM3NmIxMzM3Ng=="
+          }
+        ]
       }
     },
     {
@@ -375,6 +429,58 @@
       "wrapperId": "default"
     },
     {
+      "id": "84eaf501-8d9f-4391-987b-91a4a467805a",
+      "name": "transmisson",
+      "url": "https://homarr.dev",
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/transmission.svg",
+        "appNameStatus": "normal",
+        "positionAppName": "column",
+        "lineClampAppName": 1,
+        "appNameFontSize": 16
+      },
+      "network": {
+        "enabledStatusChecker": true,
+        "statusCodes": [
+          "200",
+          "301",
+          "302",
+          "304",
+          "307",
+          "308"
+        ]
+      },
+      "behaviour": {
+        "isOpeningNewTab": true,
+        "externalUrl": "http://[homarr_hostname]:9091"
+      },
+      "area": {
+        "type": "wrapper",
+        "properties": {
+          "id": "default"
+        }
+      },
+      "shape": {
+        "lg": {
+          "location": {
+            "x": 3,
+            "y": 3
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        }
+      },
+      "integration": {
+        "type": null,
+        "properties": []
+      },
+      "port": 60213,
+      "icon": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/flaresolverr.svg",
+      "wrapperId": "default"
+    },
+    {
       "id": "7391986e-9de8-479d-a0d3-b23ee2afb46c",
       "name": "qbittorrent",
       "url": "http://qbittorrent:60219",
@@ -433,112 +539,6 @@
             "value": "password"
           }
         ]
-      }
-    },
-    {
-      "id": "4078bd7f-5ca3-4036-86b8-6627872c6231",
-      "name": "emby",
-      "url": "http://emby:8989",
-      "appearance": {
-        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/emby.svg",
-        "appNameStatus": "normal",
-        "positionAppName": "column",
-        "lineClampAppName": 1,
-        "appNameFontSize": 16
-      },
-      "network": {
-        "enabledStatusChecker": true,
-        "statusCodes": [
-          "200"
-        ]
-      },
-      "behaviour": {
-        "isOpeningNewTab": true,
-        "externalUrl": "http://[homarr_hostname]:60220",
-        "tooltipDescription": "媒体播放器"
-      },
-      "area": {
-        "type": "wrapper",
-        "properties": {
-          "id": "default"
-        }
-      },
-      "shape": {
-        "lg": {
-          "location": {
-            "x": 4,
-            "y": 2
-          },
-          "size": {
-            "width": 1,
-            "height": 1
-          }
-        }
-      },
-      "integration": {
-        "type": "jellyfin",
-        "properties": [
-          {
-            "field": "username",
-            "type": "public",
-            "value": "root"
-          },
-          {
-            "field": "password",
-            "type": "private",
-            "value": "password"
-          }
-        ]
-      }
-    },
-    {
-      "id": "ad00ee94-b7ec-4943-b208-c63c7d7cec39",
-      "name": "prowlarr",
-      "url": "http://prowlarr:969",
-      "appearance": {
-        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/prowlarr.svg",
-        "appNameStatus": "normal",
-        "positionAppName": "column",
-        "lineClampAppName": 1,
-        "appNameFontSize": 16
-      },
-      "network": {
-        "enabledStatusChecker": true,
-        "statusCodes": [
-          "200",
-          "301",
-          "302",
-          "304",
-          "307",
-          "308"
-        ]
-      },
-      "behaviour": {
-        "isOpeningNewTab": true,
-        "externalUrl": "http://[homarr_hostname]:60223",
-        "tooltipDescription": "资源检索工具"
-      },
-      "area": {
-        "type": "wrapper",
-        "properties": {
-          "id": "default"
-        }
-      },
-      "shape": {
-        "lg": {
-          "location": {
-            "x": 2,
-            "y": 3
-          },
-          "size": {
-            "width": 1,
-            "height": 1
-          }
-        }
-      },
-      "integration": {
-        "type": null,
-        "properties": []
       }
     }
   ],

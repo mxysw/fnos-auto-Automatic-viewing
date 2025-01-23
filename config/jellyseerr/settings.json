@@ -80,14 +80,13 @@
    "port": 7878,
    "apiKey": "e71771d7a55a4b318fc0a247cc4dcf85",
    "useSsl": false,
+   "baseUrl": "",
    "activeProfileId": 4,
    "activeProfileName": "HD-1080p",
    "activeDirectory": "/media/video/movie",
    "is4k": false,
    "minimumAvailability": "released",
-   "tags": [
-    4
-   ],
+   "tags": [],
    "isDefault": true,
    "syncEnabled": false,
    "preventSearch": false,
@@ -108,12 +107,8 @@
    "activeAnimeProfileId": 4,
    "activeAnimeProfileName": "HD-1080p",
    "activeAnimeDirectory": "/media/video/anime",
-   "tags": [
-    1
-   ],
-   "animeTags": [
-    2
-   ],
+   "tags": [],
+   "animeTags": [],
    "is4k": false,
    "isDefault": true,
    "enableSeasonFolders": true,
@@ -199,7 +194,7 @@
     }
    },
    "webpush": {
-    "enabled": false,
+    "enabled": true,
     "options": {}
    },
    "gotify": {

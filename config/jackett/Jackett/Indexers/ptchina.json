@@ -1,0 +1,72 @@
+[
+  {
+    "id": "sitelink",
+    "type": "inputstring",
+    "name": "Site Link",
+    "value": "https://ptchina.org/"
+  },
+  {
+    "id": "cookieheader",
+    "type": "hiddendata",
+    "name": "CookieHeader",
+    "value": "c_secure_uid=MjMyOTE%3D; c_secure_pass=f8287e93435e4178664856e0333838ea; c_secure_ssl=eWVhaA%3D%3D; c_secure_tracker_ssl=eWVhaA%3D%3D; c_secure_login=bm9wZQ%3D%3D"
+  },
+  {
+    "id": "lasterror",
+    "type": "hiddendata",
+    "name": "LastError",
+    "value": null
+  },
+  {
+    "id": "username",
+    "type": "inputstring",
+    "name": "Username",
+    "value": "wscdfk"
+  },
+  {
+    "id": "password",
+    "type": "inputstring",
+    "name": "Password",
+    "value": "CfDJ8BbeUdTQ2SxAl7yWgbh_qVRID_r-3Egv_Kz-nWmPQGIpotYm8SZuVVQEh5ChCYgirueT-c-eVAywXTFiUkt37HdNWarqhk1bq8TMzWDS5lzU1usKvRADCuP2zi_ion_b3A"
+  },
+  {
+    "id": "2facode",
+    "type": "inputstring",
+    "name": "2FA code",
+    "value": ""
+  },
+  {
+    "id": "searchfreeleechonly",
+    "type": "inputbool",
+    "name": "Search freeleech only",
+    "value": false
+  },
+  {
+    "id": "sortrequestedfromsite",
+    "type": "inputselect",
+    "name": "Sort requested from site",
+    "value": "4",
+    "options": {
+      "4": "created",
+      "7": "seeders",
+      "5": "size",
+      "1": "title"
+    }
+  },
+  {
+    "id": "orderrequestedfromsite",
+    "type": "inputselect",
+    "name": "Order requested from site",
+    "value": "desc",
+    "options": {
+      "desc": "desc",
+      "asc": "asc"
+    }
+  },
+  {
+    "id": "tags",
+    "type": "inputtags",
+    "name": "Tags",
+    "value": ""
+  }
+]

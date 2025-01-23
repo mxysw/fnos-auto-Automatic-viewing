@@ -9,13 +9,13 @@
     "id": "cookieheader",
     "type": "hiddendata",
     "name": "CookieHeader",
-    "value": "PHPSESSID=bjnv9oq5e6605rkfr5a0f43um5"
+    "value": "PHPSESSID=eol68i19tias43c8ll8mcll7a7"
   },
   {
     "id": "lasterror",
     "type": "hiddendata",
     "name": "LastError",
-    "value": "Exception (torrentdownload): Received an unexpected EOF or 0 bytes from the transport stream.: The SSL connection could not be established, see inner exception."
+    "value": null
   },
   {
     "id": "sortrequestedfromsite(appliesonlytosearchwithkeywords)",
