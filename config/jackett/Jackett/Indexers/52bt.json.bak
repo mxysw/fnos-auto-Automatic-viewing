@@ -9,13 +9,13 @@
     "id": "cookieheader",
     "type": "hiddendata",
     "name": "CookieHeader",
-    "value": "session=eyJfZnJlc2giOmZhbHNlLCJfcGVybWFuZW50Ijp0cnVlLCJjc3JmX3Rva2VuIjp7IiBiIjoiWmpGaU9XVmlaRGRpWm1NNE16WXpNR1V4WkRkaVlUQTNNV05oTW1VeU5qUmhORGczWXpRelpnPT0ifX0.Z5K3_Q.C1G1PRRkt60b4c0CYkVOkMQ0Bd0"
+    "value": "session=eyJfZnJlc2giOmZhbHNlLCJfcGVybWFuZW50Ijp0cnVlLCJjc3JmX3Rva2VuIjp7IiBiIjoiT1RWaVpqaG1ZVFEzTVRkaVpEUm1aREV5TW1NM1pETTVabUk1TnpNMk9USmtaVEV5Tm1NM09RPT0ifX0.Z5Qk_A.ZmCsntdhFZk_aLyPB5xE1OSux94"
   },
   {
     "id": "lasterror",
     "type": "hiddendata",
     "name": "LastError",
-    "value": "Exception (52bt): Received an unexpected EOF or 0 bytes from the transport stream.: The SSL connection could not be established, see inner exception."
+    "value": null
   },
   {
     "id": "category",

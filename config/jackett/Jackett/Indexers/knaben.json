@@ -15,7 +15,7 @@
     "id": "lasterror",
     "type": "hiddendata",
     "name": "LastError",
-    "value": "Exception (knaben): Unexpected response status 'InternalServerError' code from indexer request: Parse error"
+    "value": null
   },
   {
     "id": "tags",

@@ -26,22 +26,6 @@ services:
       network:
         ipv4_address: 172.128.2.10
 
-    #   whisparr:
-    # container_name: whisparr
-    # image: ghcr.io/hotio/whisparr
-    # restart: unless-stopped
-    # ports:
-    #   - "6969:6969"
-    # environment:
-    #   - PUID=${PUID}
-    #   - PGID=${PGID}
-    #   - TZ=Asia/Shanghai
-    # volumes:
-    #   - ${CONFIG_PATH}/whisparr:/config
-    #   - ${MEDIA_PATH}:/media/able
-    # networks:
-    #   network:
-    #     ipv4_address: 172.128.2.30
 
           #  heimdall:
           #    image: linuxserver/heimdall:latest
@@ -93,7 +77,7 @@ services:
         ipv4_address: 172.128.2.15
 
   jellyseerr:
-    image: mxy6662/jellyseerr:latest
+    image: fallenbagel/jellyseerr:latest
     container_name: jellyseerr
     restart: unless-stopped
     environment:
@@ -160,35 +144,36 @@ services:
       - PGID=${PGID}
       - TZ=${TZ}
       - WEBUI_PORT=60219
+      - TORRENTING_PORT=49153
     volumes:
       - ${CONFIG_PATH}/qbittorrent:/config
       - ${MEDIA_PATH}:/media/video
     ports:
       - 60219:60219
-      - 60881:6881
-      - 60881:6881/udp
+      - 60881:49153
+      - 60881:49153/udp
     networks:
       network:
         ipv4_address: 172.128.2.19
 
-  # transmission:
-  #   image: lscr.io/linuxserver/transmission:latest
-  #   container_name: transmission
-  #   restart: unless-stopped
-  #   environment:
-  #     - PUID=${PUID}
-  #     - PGID=${PGID}
-  #     - TZ=${TZ}
-  #   ports:
-  #     - "9091:9091"
-  #     - "51413:51413"
-  #     - "51413:51413/udp"
-  #   volumes:
-  #     - ${CONFIG_PATH}/transmission/data:/config
-  #     - ${MEDIA_PATH}/downloads:/downloads
-  #   networks:
-  #     network:
-  #       ipv4_address: 172.128.2.28
+  transmission:
+    image: lscr.io/linuxserver/transmission:latest
+    container_name: transmission
+    restart: unless-stopped
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+    ports:
+      - "9091:9091"
+      - "51413:51413"
+      - "51413:51413/udp"
+    volumes:
+      - ${CONFIG_PATH}/transmission/data:/config
+      - ${MEDIA_PATH}:/media/video
+    networks:
+      network:
+        ipv4_address: 172.128.2.28
 
   chinesesubfinder:
     image: allanpk716/chinesesubfinder:latest-lite
@@ -264,6 +249,7 @@ services:
       network: 
         ipv4_address: 172.128.2.26
 
+
   emby:
     image: mxy6662/emby:latest
     container_name: emby
@@ -274,6 +260,7 @@ services:
       - TZ=${TZ}
     volumes:
       - ${CONFIG_PATH}/emby:/config
+      - ${CONFIG_PATH}/emby/system:/app/emby/system
       - ${MEDIA_PATH}:/media/video
     ports:
       - 60220:8096

@@ -22,15 +22,16 @@
   "trustProxy": false,
   "mediaServerType": 3,
   "partialRequestsEnabled": true,
+  "enableSpecialEpisodes": false,
   "locale": "zh-CN",
   "proxy": {
-   "enabled": false,
-   "hostname": "",
-   "port": 8080,
+   "enabled": true,
+   "hostname": "172.128.2.25",
+   "port": "7890",
    "useSsl": false,
    "user": "",
    "password": "",
-   "bypassFilter": "",
+   "bypassFilter": "172.128.2.20,172.128.2.19,172.128.2.16,172.128.2.15,172.128.2.23,172.128.2.17",
    "bypassLocalAddresses": true
   }
  },
@@ -42,7 +43,7 @@
   "libraries": []
  },
  "jellyfin": {
-  "name": "80c0f8496d6c",
+  "name": "7c7a23c49544",
   "ip": "172.128.2.20",
   "port": 8096,
   "useSsl": false,
@@ -107,8 +108,12 @@
    "activeAnimeProfileId": 4,
    "activeAnimeProfileName": "HD-1080p",
    "activeAnimeDirectory": "/media/video/anime",
-   "tags": [],
-   "animeTags": [],
+   "tags": [
+    1
+   ],
+   "animeTags": [
+    2
+   ],
    "is4k": false,
    "isDefault": true,
    "enableSeasonFolders": true,
@@ -166,6 +171,7 @@
     "options": {
      "botAPI": "",
      "chatId": "",
+     "messageThreadId": "",
      "sendSilently": false
     }
    },
