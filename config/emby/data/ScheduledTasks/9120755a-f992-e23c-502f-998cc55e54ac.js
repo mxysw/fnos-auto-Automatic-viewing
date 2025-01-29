@@ -1,1 +1,1 @@
-{"StartTimeUtc":"2025-01-24T17:31:10.0391724Z","EndTimeUtc":"2025-01-24T17:31:10.0401128Z","Status":"Completed","Name":"Refresh Emby Connect Data","Key":"RefreshAuthorizationsScheduledTask","Id":"9120755af992e23c502f998cc55e54ac"}
+{"StartTimeUtc":"2025-01-29T11:56:39.0869870Z","EndTimeUtc":"2025-01-29T11:56:39.0958255Z","Status":"Completed","Name":"Refresh Emby Connect Data","Key":"RefreshAuthorizationsScheduledTask","Id":"9120755af992e23c502f998cc55e54ac"}

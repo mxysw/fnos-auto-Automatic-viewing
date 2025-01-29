@@ -9,7 +9,7 @@
     "id": "cookieheader",
     "type": "hiddendata",
     "name": "CookieHeader",
-    "value": "c_secure_uid=NTY5Mg%3D%3D; c_secure_pass=0d63426a36fae87522112e33cef70c61; c_secure_ssl=eWVhaA%3D%3D; c_secure_tracker_ssl=eWVhaA%3D%3D; c_secure_login=bm9wZQ%3D%3D"
+    "value": ""
   },
   {
     "id": "lasterror",
@@ -27,7 +27,7 @@
     "id": "password",
     "type": "inputstring",
     "name": "Password",
-    "value": "CfDJ8BbeUdTQ2SxAl7yWgbh_qVQvZHmrb1HeCGcPIL3q-L9Nd7bPuxxWea5Qgi4kstNiks2Gl19V0tjSaDDHdKA5HJIeIGZx_BIBxvBz3vwOPDFwY6TRI1Hoi4TlBU47lOlqMw"
+    "value": "CfDJ8BbeUdTQ2SxAl7yWgbh_qVQS0qRp19YGU6DxVbTzM6kwm2sQ7hlOULBkffpwzbLqtl1-8nOOd9hh05EqlORJg3Ub63sflTSI3I9MxzDwDxJqQ_JLTEWlIeuKcQ7PH5_wHg"
   },
   {
     "id": "2facode",

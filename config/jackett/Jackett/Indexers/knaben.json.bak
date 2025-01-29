@@ -15,7 +15,7 @@
     "id": "lasterror",
     "type": "hiddendata",
     "name": "LastError",
-    "value": "Exception (knaben): The response ended prematurely. (ResponseEnded): An error occurred while sending the request."
+    "value": "Exception (knaben): Cannot determine the frame size or a corrupted frame was received.: The SSL connection could not be established, see inner exception."
   },
   {
     "id": "tags",

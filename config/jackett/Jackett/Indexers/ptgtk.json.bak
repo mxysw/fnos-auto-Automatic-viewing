@@ -15,7 +15,7 @@
     "id": "lasterror",
     "type": "hiddendata",
     "name": "LastError",
-    "value": "Exception (ptgtk): Received an unexpected EOF or 0 bytes from the transport stream.: The SSL connection could not be established, see inner exception."
+    "value": null
   },
   {
     "id": "username",
@@ -27,7 +27,7 @@
     "id": "password",
     "type": "inputstring",
     "name": "Password",
-    "value": "CfDJ8BbeUdTQ2SxAl7yWgbh_qVQie75PADfTOVlByqGYx64X6ZZikiKf9SZL4yspyLU7xbhur7o1UELvqLsStGKqGwhMZdcNSAhTmzu93-gj1muLw5S1yGZxwB_rsiTdbYWwBg"
+    "value": "CfDJ8BbeUdTQ2SxAl7yWgbh_qVRg9grahQzLG3nRbsFBP_a9kLog4NxbDZvlFTCPpc8YMmCrDywijw0vKNd7FvpZUfzLwJ_K_YZUrNE6Xp6rTbeKXfZYEeoewDbY7v3698Jh-A"
   },
   {
     "id": "2facode",

@@ -23,6 +23,8 @@
   "mediaServerType": 3,
   "partialRequestsEnabled": true,
   "enableSpecialEpisodes": false,
+  "forceIpv4First": false,
+  "dnsServers": "",
   "locale": "zh-CN",
   "proxy": {
    "enabled": true,
