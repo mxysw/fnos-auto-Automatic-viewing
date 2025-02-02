@@ -1,9 +1,9 @@
 {
- "clientId": "dacc33e8-de23-447e-99b1-70a8473a7af9",
- "vapidPrivate": "pRIl_3RFo1_vSl6iwgguaC3Fz6DnT1a1AN6TgZWJS4k",
- "vapidPublic": "BGM14CCzglT8aPw0odfmeXGl67or9igwQsLaS1ny2I5Yc6Uj5lw3ew-7cp5uPDu51N2Ks0egTyaLbHUD_ySHslo",
+ "clientId": "fd37c7a1-b979-4d24-9880-058743372d42",
+ "vapidPrivate": "mcSom_vSy9wJhFoil3zSWgAtwbtiaNyV24f7e2YuvQI",
+ "vapidPublic": "BL_2DZKrv1Ci-fBqXVnrvP3tbBe7QgHC75VjpLfobq0huxRqZe07w9RKXt6GOTCrQJO7eGorxecZYPI1xvA8DpU",
  "main": {
-  "apiKey": "MTczNzIyNDIyNjYxNzg5MGM5NDJkLWUwMTEtNDc0NS04M2RmLTIxZDM3NmIxMzM3Ng==",
+  "apiKey": "MTczODQ3OTIwOTA0NzkxZWY5NDE0LTIwN2UtNDI3NS05Zjg3LTBiZWE2MDM4Y2EyNw==",
   "applicationTitle": "Jellyseerr",
   "applicationUrl": "",
   "csrfProtection": false,
@@ -22,15 +22,18 @@
   "trustProxy": false,
   "mediaServerType": 3,
   "partialRequestsEnabled": true,
-  "locale": "zh-CN",
+  "enableSpecialEpisodes": false,
+  "forceIpv4First": false,
+  "dnsServers": "",
+  "locale": "en",
   "proxy": {
-   "enabled": false,
-   "hostname": "",
-   "port": 8080,
+   "enabled": true,
+   "hostname": "172.128.2.25",
+   "port": "7890",
    "useSsl": false,
    "user": "",
    "password": "",
-   "bypassFilter": "",
+   "bypassFilter": "172.128.2.20,172.128.2.19,172.128.2.16,172.128.2.15,172.128.2.23,172.128.2.17",
    "bypassLocalAddresses": true
   }
  },
@@ -42,7 +45,7 @@
   "libraries": []
  },
  "jellyfin": {
-  "name": "80c0f8496d6c",
+  "name": "e776ccec932f",
   "ip": "172.128.2.20",
   "port": 8096,
   "useSsl": false,
@@ -70,59 +73,11 @@
    }
   ],
   "serverId": "77d804d5e4a84fc6800b98aaa64b1ea1",
-  "apiKey": "d3e6ce612a22438398c0b5aec2833516"
+  "apiKey": "155a0c7bc85f477abcf49e1a71d7face"
  },
  "tautulli": {},
- "radarr": [
-  {
-   "name": "radarr",
-   "hostname": "172.128.2.17",
-   "port": 7878,
-   "apiKey": "e71771d7a55a4b318fc0a247cc4dcf85",
-   "useSsl": false,
-   "activeProfileId": 4,
-   "activeProfileName": "HD-1080p",
-   "activeDirectory": "/media/video/movie",
-   "is4k": false,
-   "minimumAvailability": "released",
-   "tags": [
-    4
-   ],
-   "isDefault": true,
-   "syncEnabled": false,
-   "preventSearch": false,
-   "tagRequests": false,
-   "id": 0
-  }
- ],
- "sonarr": [
-  {
-   "name": "sonarr",
-   "hostname": "172.128.2.18",
-   "port": 8989,
-   "apiKey": "bd81b15d3a704ae7ad3135d67c8be155",
-   "useSsl": false,
-   "activeProfileId": 4,
-   "activeProfileName": "HD-1080p",
-   "activeDirectory": "/media/video/serial",
-   "activeAnimeProfileId": 4,
-   "activeAnimeProfileName": "HD-1080p",
-   "activeAnimeDirectory": "/media/video/anime",
-   "tags": [
-    1
-   ],
-   "animeTags": [
-    2
-   ],
-   "is4k": false,
-   "isDefault": true,
-   "enableSeasonFolders": true,
-   "syncEnabled": false,
-   "preventSearch": false,
-   "tagRequests": false,
-   "id": 0
-  }
- ],
+ "radarr": [],
+ "sonarr": [],
  "public": {
   "initialized": true
  },
@@ -171,6 +126,7 @@
     "options": {
      "botAPI": "",
      "chatId": "",
+     "messageThreadId": "",
      "sendSilently": false
     }
    },

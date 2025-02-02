@@ -15,7 +15,7 @@
     "id": "lasterror",
     "type": "hiddendata",
     "name": "LastError",
-    "value": "Exception (exttorrents): FlareSolverr was unable to process the request, please check FlareSolverr logs. Message: Error: Error solving the challenge. Timeout after 55.0 seconds.: The operation was canceled."
+    "value": "Exception (exttorrents): Received an unexpected EOF or 0 bytes from the transport stream.: The SSL connection could not be established, see inner exception."
   },
   {
     "id": "sortrequestedfromsite",
