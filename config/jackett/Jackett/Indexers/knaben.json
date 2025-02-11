@@ -15,7 +15,7 @@
     "id": "lasterror",
     "type": "hiddendata",
     "name": "LastError",
-    "value": "Exception (knaben): Received an unexpected EOF or 0 bytes from the transport stream.: The SSL connection could not be established, see inner exception."
+    "value": null
   },
   {
     "id": "tags",

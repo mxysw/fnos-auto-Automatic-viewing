@@ -1,0 +1,209 @@
+{
+    "EditorTitle": "神医助手",
+    "EditorDescription": "",
+    "ConflictPluginLoadedStatus": {
+        "Status": "None",
+        "Caption": "",
+        "StatusText": "",
+        "CanHideInCompactView": false
+    },
+    "HarmonyModStatus": {
+        "Status": "None",
+        "Caption": "",
+        "StatusText": "",
+        "CanHideInCompactView": false
+    },
+    "GeneralOptions": {
+        "EditorTitle": "通用",
+        "CatchupMode": false,
+        "CatchupTaskList": [
+            {
+                "Value": "MediaInfo",
+                "Name": "媒体信息提取",
+                "IsEnabled": true
+            },
+            {
+                "Value": "Fingerprint",
+                "Name": "原生片头探测",
+                "IsEnabled": true
+            },
+            {
+                "Value": "IntroSkip",
+                "Name": "行为探测标记同步",
+                "IsEnabled": true
+            }
+        ],
+        "CatchupTaskScope": "MediaInfo",
+        "MaxConcurrentCount": 1,
+        "CooldownDurationSeconds": 0,
+        "Tier2MaxConcurrentCount": 1,
+        "FeatureRequiresPremiere": false,
+        "IsNewItem": false
+    },
+    "ModOptions": {
+        "EditorTitle": "搜索",
+        "EnhanceChineseSearch": false,
+        "EnhanceChineseSearchRestore": false,
+        "SearchItemTypeList": [
+            {
+                "Value": "Movie",
+                "Name": "电影",
+                "IsEnabled": true
+            },
+            {
+                "Value": "Collection",
+                "Name": "合集",
+                "IsEnabled": true
+            },
+            {
+                "Value": "Series",
+                "Name": "电视节目",
+                "IsEnabled": true
+            },
+            {
+                "Value": "Season",
+                "Name": "季",
+                "IsEnabled": true
+            },
+            {
+                "Value": "Episode",
+                "Name": "集",
+                "IsEnabled": true
+            },
+            {
+                "Value": "Person",
+                "Name": "人物",
+                "IsEnabled": true
+            },
+            {
+                "Value": "LiveTv",
+                "Name": "电视直播",
+                "IsEnabled": true
+            },
+            {
+                "Value": "Music",
+                "Name": "音乐",
+                "IsEnabled": true
+            },
+            {
+                "Value": "MusicAlbum",
+                "Name": "专辑",
+                "IsEnabled": true
+            },
+            {
+                "Value": "MusicArtist",
+                "Name": "艺术家",
+                "IsEnabled": true
+            },
+            {
+                "Value": "Playlist",
+                "Name": "播放列表",
+                "IsEnabled": true
+            },
+            {
+                "Value": "Photo",
+                "Name": "照片",
+                "IsEnabled": true
+            },
+            {
+                "Value": "PhotoAlbum",
+                "Name": "相册",
+                "IsEnabled": true
+            },
+            {
+                "Value": "Genre",
+                "Name": "类型风格",
+                "IsEnabled": true
+            },
+            {
+                "Value": "Book",
+                "Name": "书籍",
+                "IsEnabled": true
+            },
+            {
+                "Value": "Game",
+                "Name": "游戏",
+                "IsEnabled": true
+            },
+            {
+                "Value": "Trailer",
+                "Name": "预告片",
+                "IsEnabled": true
+            },
+            {
+                "Value": "Tag",
+                "Name": "标签",
+                "IsEnabled": true
+            },
+            {
+                "Value": "Studio",
+                "Name": "工作室",
+                "IsEnabled": true
+            }
+        ],
+        "SearchScope": "Movie,Collection,Series",
+        "ExcludeOriginalTitleFromSearch": false,
+        "IsChineseSearchSupported": true,
+        "FeatureRequiresPremiere": false,
+        "IsNewItem": false
+    },
+    "NetworkOptions": {
+        "EditorTitle": "网络",
+        "EnableProxyServer": true,
+        "ProxyServerUrl": "http://172.128.2.25:7890",
+        "ProxyServerStatus": {
+            "Status": "Succeeded",
+            "Caption": "可用",
+            "StatusText": "123.1864 ms",
+            "CanHideInCompactView": false
+        },
+        "ShowProxyServerStatus": true,
+        "IgnoreCertificateValidation": false,
+        "IsModSupported": true,
+        "FeatureRequiresPremiere": false,
+        "IsNewItem": false
+    },
+    "AboutOptions": {
+        "EditorTitle": "关于",
+        "VersionInfoList": [
+            {
+                "Icon": "info",
+                "IconMode": "SmallRegular",
+                "Status": "Unavailable",
+                "PrimaryText": "2.0.0.14+f4ef19d",
+                "ShowSecondaryFirst": false,
+                "HasPercentage": false,
+                "PercentComplete": 0
+            },
+            {
+                "Icon": "code",
+                "IconMode": "SmallRegular",
+                "Status": "Unavailable",
+                "PrimaryText": "项目链接",
+                "ShowSecondaryFirst": false,
+                "HasPercentage": false,
+                "PercentComplete": 0,
+                "HyperLink": "https://github.com/sjtuross/StrmAssistant"
+            },
+            {
+                "Icon": "menu_book",
+                "IconMode": "SmallRegular",
+                "Status": "Unavailable",
+                "PrimaryText": "功能介绍",
+                "ShowSecondaryFirst": false,
+                "HasPercentage": false,
+                "PercentComplete": 0,
+                "HyperLink": "https://github.com/sjtuross/StrmAssistant/wiki"
+            }
+        ],
+        "DefaultUICulture": "zh-CN",
+        "GitHubToken": "",
+        "GitHubProxy": "",
+        "FeatureRequiresPremiere": false,
+        "IsNewItem": false
+    },
+    "IsHarmonyModFailed": false,
+    "ShowConflictPluginLoadedStatus": false,
+    "FeatureRequiresPremiere": false,
+    "IsNewItem": false
+}

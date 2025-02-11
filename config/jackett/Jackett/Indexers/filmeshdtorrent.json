@@ -15,7 +15,7 @@
     "id": "lasterror",
     "type": "hiddendata",
     "name": "LastError",
-    "value": "Exception (filmeshdtorrent): Invalid URI: The URI is empty.: Parse error"
+    "value": null
   },
   {
     "id": "tags",

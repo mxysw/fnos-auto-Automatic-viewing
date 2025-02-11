@@ -45,7 +45,7 @@
   "libraries": []
  },
  "jellyfin": {
-  "name": "e776ccec932f",
+  "name": "b9e3e13a0367",
   "ip": "172.128.2.20",
   "port": 8096,
   "useSsl": false,

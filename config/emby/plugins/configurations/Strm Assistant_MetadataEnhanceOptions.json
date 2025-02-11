@@ -1,0 +1,75 @@
+{
+    "EditorTitle": "元数据增强",
+    "ChineseMovieDb": false,
+    "LanguageList": [
+        {
+            "Value": "zh-cn",
+            "Name": "zh-CN",
+            "IsEnabled": true
+        },
+        {
+            "Value": "zh-sg",
+            "Name": "zh-SG",
+            "IsEnabled": true
+        },
+        {
+            "Value": "zh-hk",
+            "Name": "zh-HK",
+            "IsEnabled": true
+        },
+        {
+            "Value": "zh-tw",
+            "Name": "zh-TW",
+            "IsEnabled": true
+        },
+        {
+            "Value": "ja-jp",
+            "Name": "ja-JP",
+            "IsEnabled": true
+        }
+    ],
+    "FallbackLanguages": "zh-sg",
+    "ChineseTvdb": false,
+    "TvdbLanguageList": [
+        {
+            "Value": "zho",
+            "Name": "zho",
+            "IsEnabled": true
+        },
+        {
+            "Value": "zhtw",
+            "Name": "zhtw",
+            "IsEnabled": true
+        },
+        {
+            "Value": "yue",
+            "Name": "yue",
+            "IsEnabled": true
+        },
+        {
+            "Value": "jpn",
+            "Name": "jpn",
+            "IsEnabled": true
+        }
+    ],
+    "TvdbFallbackLanguages": "zhtw,yue",
+    "BlockNonFallbackLanguage": false,
+    "ShowBlockNonFallbackLanguage": false,
+    "MovieDbEpisodeGroup": false,
+    "LocalEpisodeGroup": true,
+    "EnhanceMovieDbPerson": false,
+    "RefreshPersonMode": "Default",
+    "PreferOriginalPoster": false,
+    "PinyinSortName": false,
+    "EnhanceNfoMetadata": false,
+    "AltMovieDbConfig": false,
+    "AltMovieDbApiUrl": "https://api.tmdb.org",
+    "AltMovieDbImageUrl": "",
+    "AltMovieDbApiKey": "",
+    "IsMovieDbPluginLoaded": true,
+    "IsTvdbPluginLoaded": true,
+    "IsNfoMetadataPluginLoaded": true,
+    "IsModSupported": true,
+    "FeatureRequiresPremiere": false,
+    "IsNewItem": false
+}
