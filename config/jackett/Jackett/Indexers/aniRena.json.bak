@@ -1,0 +1,26 @@
+[
+  {
+    "id": "sitelink",
+    "type": "inputstring",
+    "name": "Site Link",
+    "value": "https://www.anirena.com/"
+  },
+  {
+    "id": "cookieheader",
+    "type": "hiddendata",
+    "name": "CookieHeader",
+    "value": "anirena_com_u=1; anirena_com_sid=71f345fa9a12c04adb4a7cadca4aca7a; __cflb=02DiuD8AhNjcPpJkAnGMbKZD2YdMYosRsSjPa7xrMjwhn"
+  },
+  {
+    "id": "lasterror",
+    "type": "hiddendata",
+    "name": "LastError",
+    "value": "Exception (aniRena): Received an unexpected EOF or 0 bytes from the transport stream.: The SSL connection could not be established, see inner exception."
+  },
+  {
+    "id": "tags",
+    "type": "inputtags",
+    "name": "Tags",
+    "value": ""
+  }
+]

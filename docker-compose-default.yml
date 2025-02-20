@@ -26,23 +26,6 @@ services:
       network:
         ipv4_address: 172.128.2.10
 
-
-          #  heimdall:
-          #    image: linuxserver/heimdall:latest
-          #    container_name: heimdall
-          #    restart: unless-stopped
-          #    environment:
-          #      - PUID=${PUID}
-          #      - PGID=${PGID}
-          #      - TZ=Asia/Shanghai
-          #    volumes:
-          #      - ${CONFIG_PATH}/heimdall:/config
-          #    ports:
-          #      - 60211:443
-          #    networks:
-          #      network:
-          #        ipv4_address: 172.128.2.11
-
   flaresolverr:
     image: flaresolverr/flaresolverr:latest
     container_name: flaresolverr
@@ -148,13 +131,13 @@ services:
     volumes:
       - ${CONFIG_PATH}/qbittorrent:/config
       - ${MEDIA_PATH}:/media/video
-    ports:
-      - 60219:60219
-      - 60881:49153
-      - 60881:49153/udp
-    networks:
-      network:
-        ipv4_address: 172.128.2.19
+    # 移除端口映射
+    #ports:
+    #  - 60219:60219
+    #  - 60881:49153
+    #  - 60881:49153/udp
+    # 使用 host 网络模式
+    network_mode: host
 
   transmission:
     image: lscr.io/linuxserver/transmission:latest
@@ -164,16 +147,16 @@ services:
       - PUID=${PUID}
       - PGID=${PGID}
       - TZ=${TZ}
-    ports:
-      - "9091:9091"
-      - "51413:51413"
-      - "51413:51413/udp"
+    # 移除端口映射
+    #ports:
+    #  - "9091:9091"
+    #  - "51413:51413"
+    #  - "51413:51413/udp"
     volumes:
       - ${CONFIG_PATH}/transmission/data:/config
       - ${MEDIA_PATH}:/media/video
-    networks:
-      network:
-        ipv4_address: 172.128.2.28
+    # 使用 host 网络模式
+    network_mode: host
 
   chinesesubfinder:
     image: allanpk716/chinesesubfinder:latest-lite
@@ -249,10 +232,26 @@ services:
       network: 
         ipv4_address: 172.128.2.26
 
+#   lidarr:
+#     image: lscr.io/linuxserver/lidarr:latest
+#     container_name: lidarr
+#     restart: unless-stopped
+#     environment:
+#       - PUID=${PUID}
+#       - PGID=${PGID}
+#       - TZ=${TZ}
+#     volumes:
+#       - ${CONFIG_PATH}/lidarr/config:/config
+#       - ${MEDIA_PATH}:/media/video
+#     ports:
+#       - 8686:8686
+#     networks:
+#       network:
+#         ipv4_address: 172.128.2.27
 
   emby:
     image: mxy6662/emby:latest
-    container_name: emby
+    container_name: emby1
     restart: unless-stopped
     environment:
       - PUID=${PUID}

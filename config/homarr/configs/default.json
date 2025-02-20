@@ -23,213 +23,6 @@
   ],
   "apps": [
     {
-      "id": "4078bd7f-5ca3-4036-86b8-6627872c6231",
-      "name": "emby",
-      "url": "http://emby:8989",
-      "appearance": {
-        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/emby.svg",
-        "appNameStatus": "normal",
-        "positionAppName": "column",
-        "lineClampAppName": 1,
-        "appNameFontSize": 16
-      },
-      "network": {
-        "enabledStatusChecker": true,
-        "statusCodes": [
-          "200"
-        ]
-      },
-      "behaviour": {
-        "isOpeningNewTab": true,
-        "externalUrl": "http://[homarr_hostname]:60220",
-        "tooltipDescription": "媒体播放器"
-      },
-      "area": {
-        "type": "wrapper",
-        "properties": {
-          "id": "default"
-        }
-      },
-      "shape": {
-        "lg": {
-          "location": {
-            "x": 4,
-            "y": 2
-          },
-          "size": {
-            "width": 1,
-            "height": 1
-          }
-        }
-      },
-      "integration": {
-        "type": "jellyfin",
-        "properties": [
-          {
-            "field": "username",
-            "type": "public",
-            "value": "root"
-          },
-          {
-            "field": "password",
-            "type": "private",
-            "value": "password"
-          }
-        ]
-      }
-    },
-    {
-      "id": "ad00ee94-b7ec-4943-b208-c63c7d7cec39",
-      "name": "prowlarr",
-      "url": "http://prowlarr:969",
-      "appearance": {
-        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/prowlarr.svg",
-        "appNameStatus": "normal",
-        "positionAppName": "column",
-        "lineClampAppName": 1,
-        "appNameFontSize": 16
-      },
-      "network": {
-        "enabledStatusChecker": true,
-        "statusCodes": [
-          "200",
-          "301",
-          "302",
-          "304",
-          "307",
-          "308"
-        ]
-      },
-      "behaviour": {
-        "isOpeningNewTab": true,
-        "externalUrl": "http://[homarr_hostname]:60223",
-        "tooltipDescription": "资源检索工具"
-      },
-      "area": {
-        "type": "wrapper",
-        "properties": {
-          "id": "default"
-        }
-      },
-      "shape": {
-        "lg": {
-          "location": {
-            "x": 2,
-            "y": 3
-          },
-          "size": {
-            "width": 1,
-            "height": 1
-          }
-        }
-      },
-      "integration": {
-        "type": null,
-        "properties": []
-      }
-    },
-    {
-      "id": "90250fca-27f1-48fa-a931-04576d4f7f1b",
-      "name": "jproxy",
-      "url": "http://jproxy:8117",
-      "appearance": {
-        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/albert-heijn.svg",
-        "appNameStatus": "normal",
-        "positionAppName": "column",
-        "lineClampAppName": 1,
-        "appNameFontSize": 16
-      },
-      "network": {
-        "enabledStatusChecker": true,
-        "statusCodes": [
-          "200",
-          "301",
-          "302",
-          "304",
-          "307",
-          "308"
-        ]
-      },
-      "behaviour": {
-        "isOpeningNewTab": true,
-        "externalUrl": "http://[homarr_hostname]:60215",
-        "tooltipDescription": "种子过滤器"
-      },
-      "area": {
-        "type": "wrapper",
-        "properties": {
-          "id": "default"
-        }
-      },
-      "shape": {
-        "lg": {
-          "location": {
-            "x": 1,
-            "y": 3
-          },
-          "size": {
-            "width": 1,
-            "height": 1
-          }
-        }
-      },
-      "integration": {
-        "type": null,
-        "properties": []
-      }
-    },
-    {
-      "id": "3d89f047-5ced-4e9b-bd3a-a347a1f2175c",
-      "name": "sonarr",
-      "url": "http://sonarr:8989",
-      "appearance": {
-        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/sonarr-dark.svg",
-        "appNameStatus": "normal",
-        "positionAppName": "column",
-        "lineClampAppName": 1,
-        "appNameFontSize": 16
-      },
-      "network": {
-        "enabledStatusChecker": true,
-        "statusCodes": [
-          "200"
-        ]
-      },
-      "behaviour": {
-        "isOpeningNewTab": true,
-        "externalUrl": "http://[homarr_hostname]:60218",
-        "tooltipDescription": "电视剧检索"
-      },
-      "area": {
-        "type": "wrapper",
-        "properties": {
-          "id": "default"
-        }
-      },
-      "shape": {
-        "lg": {
-          "location": {
-            "x": 2,
-            "y": 2
-          },
-          "size": {
-            "width": 1,
-            "height": 1
-          }
-        }
-      },
-      "integration": {
-        "type": "sonarr",
-        "properties": [
-          {
-            "field": "apiKey",
-            "type": "private",
-            "value": "bd81b15d3a704ae7ad3135d67c8be155"
-          }
-        ]
-      }
-    },
-    {
       "id": "0aa70327-908e-45f0-9dbb-12fdf4cf4117",
       "name": "radarr",
       "url": "http://radarr:7878",
@@ -481,11 +274,67 @@
       "wrapperId": "default"
     },
     {
-      "id": "1dbc759f-5748-4408-b30e-aff0e4a14295",
-      "name": "v2raya",
-      "url": "https://homarr.dev",
+      "id": "4078bd7f-5ca3-4036-86b8-6627872c6231",
+      "name": "emby",
+      "url": "http://emby:8989",
       "appearance": {
-        "iconUrl": "/imgs/logo/logo.png",
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/emby.svg",
+        "appNameStatus": "normal",
+        "positionAppName": "column",
+        "lineClampAppName": 1,
+        "appNameFontSize": 16
+      },
+      "network": {
+        "enabledStatusChecker": true,
+        "statusCodes": [
+          "200"
+        ]
+      },
+      "behaviour": {
+        "isOpeningNewTab": true,
+        "externalUrl": "http://[homarr_hostname]:60220",
+        "tooltipDescription": "媒体播放器"
+      },
+      "area": {
+        "type": "wrapper",
+        "properties": {
+          "id": "default"
+        }
+      },
+      "shape": {
+        "lg": {
+          "location": {
+            "x": 4,
+            "y": 2
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        }
+      },
+      "integration": {
+        "type": "jellyfin",
+        "properties": [
+          {
+            "field": "username",
+            "type": "public",
+            "value": "root"
+          },
+          {
+            "field": "password",
+            "type": "private",
+            "value": "password"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ad00ee94-b7ec-4943-b208-c63c7d7cec39",
+      "name": "prowlarr",
+      "url": "http://prowlarr:969",
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/prowlarr.svg",
         "appNameStatus": "normal",
         "positionAppName": "column",
         "lineClampAppName": 1,
@@ -504,7 +353,8 @@
       },
       "behaviour": {
         "isOpeningNewTab": true,
-        "externalUrl": "http://192.168.31.142:2017"
+        "externalUrl": "http://[homarr_hostname]:60223",
+        "tooltipDescription": "资源检索工具"
       },
       "area": {
         "type": "wrapper",
@@ -515,8 +365,8 @@
       "shape": {
         "lg": {
           "location": {
-            "x": 0,
-            "y": 4
+            "x": 2,
+            "y": 3
           },
           "size": {
             "width": 1,
@@ -527,14 +377,62 @@
       "integration": {
         "type": null,
         "properties": []
+      }
+    },
+    {
+      "id": "90250fca-27f1-48fa-a931-04576d4f7f1b",
+      "name": "jproxy",
+      "url": "http://jproxy:8117",
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/albert-heijn.svg",
+        "appNameStatus": "normal",
+        "positionAppName": "column",
+        "lineClampAppName": 1,
+        "appNameFontSize": 16
       },
-      "icon": "/public/imgs/logo/logo.svg",
-      "wrapperId": "default"
+      "network": {
+        "enabledStatusChecker": true,
+        "statusCodes": [
+          "200",
+          "301",
+          "302",
+          "304",
+          "307",
+          "308"
+        ]
+      },
+      "behaviour": {
+        "isOpeningNewTab": true,
+        "externalUrl": "http://[homarr_hostname]:60215",
+        "tooltipDescription": "种子过滤器"
+      },
+      "area": {
+        "type": "wrapper",
+        "properties": {
+          "id": "default"
+        }
+      },
+      "shape": {
+        "lg": {
+          "location": {
+            "x": 1,
+            "y": 3
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        }
+      },
+      "integration": {
+        "type": null,
+        "properties": []
+      }
     },
     {
       "id": "7391986e-9de8-479d-a0d3-b23ee2afb46c",
       "name": "qbittorrent",
-      "url": "http://qbittorrent:60219",
+      "url": "http://[homarr_hostname]:60219",
       "appearance": {
         "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/qbittorrent.svg",
         "appNameStatus": "normal",
@@ -588,6 +486,57 @@
             "field": "password",
             "type": "private",
             "value": "password"
+          }
+        ]
+      }
+    },
+    {
+      "id": "3d89f047-5ced-4e9b-bd3a-a347a1f2175c",
+      "name": "sonarr",
+      "url": "http://sonarr:8989",
+      "appearance": {
+        "iconUrl": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/sonarr-dark.svg",
+        "appNameStatus": "normal",
+        "positionAppName": "column",
+        "lineClampAppName": 1,
+        "appNameFontSize": 16
+      },
+      "network": {
+        "enabledStatusChecker": true,
+        "statusCodes": [
+          "200"
+        ]
+      },
+      "behaviour": {
+        "isOpeningNewTab": true,
+        "externalUrl": "http://[homarr_hostname]:60218",
+        "tooltipDescription": "电视剧检索"
+      },
+      "area": {
+        "type": "wrapper",
+        "properties": {
+          "id": "default"
+        }
+      },
+      "shape": {
+        "lg": {
+          "location": {
+            "x": 2,
+            "y": 2
+          },
+          "size": {
+            "width": 1,
+            "height": 1
+          }
+        }
+      },
+      "integration": {
+        "type": "sonarr",
+        "properties": [
+          {
+            "field": "apiKey",
+            "type": "private",
+            "value": "bd81b15d3a704ae7ad3135d67c8be155"
           }
         ]
       }
